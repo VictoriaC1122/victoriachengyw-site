@@ -59,6 +59,53 @@
     }
   </script>
   <style>
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fas,
+.fab {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
+.fa-linkedin-in::before {
+  content: "\f0e1";
+}
+
+.fa-globe::before {
+  content: "\f0ac";
+}
+
 /* ============================
    Global Styles
 ============================ */
@@ -392,32 +439,52 @@ a:hover {
 ============================ */
 .icon-row {
   display: flex;
-  gap: 18px;
+  gap: 12px;
   margin-top: 32px;
   flex-wrap: wrap;
 }
 
 .icon-row a {
-  min-height: 44px;
+  min-height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 14px;
+  gap: 10px;
+  padding: 6px 14px 6px 7px;
   border-radius: 8px;
-  background: #f5f3f1;
+  background: #fbfaf9;
   color: var(--color-accent);
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-  border: 2px solid transparent;
+  border: 1px solid #e8e1e8;
+  box-shadow: 0 2px 8px rgba(62, 46, 67, 0.04);
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .icon-row a:hover {
-  background: #ebe4dd;
+  border-color: #d9c9dd;
+  background: #f8f3f8;
   opacity: 1;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(72, 50, 78, 0.1);
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #efe7f1;
+  color: #6d4877;
+  font-size: 15px;
+}
+
+.contact-label {
+  white-space: nowrap;
 }
 
 /* ============================
@@ -1467,11 +1534,23 @@ a:hover {
   }
 
   .icon-row {
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .icon-row a {
-    min-height: 44px;
+    min-width: 0;
+    min-height: 46px;
+    gap: 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
     font-size: 13px;
   }
 }
@@ -1701,6 +1780,12 @@ a:hover {
 
 }
 
+@media (max-width: 340px) {
+  .contact-label {
+    display: none;
+  }
+}
+
 @media (hover: none) {
   .icon-row a:hover,
   .app-card:hover {
@@ -1805,9 +1890,18 @@ a:hover {
             </p>
 
             <div class="icon-row" aria-label="Contact links">
-              <a href="mailto:victoriacheng1122@gmail.com">Email</a>
-              <a href="https://www.linkedin.com/in/victoria-chengyw/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://sites.google.com/view/cheng-yung-wen-victoria/homepage?authuser=0" target="_blank" rel="noopener noreferrer">Previous Website</a>
+              <a href="mailto:victoriacheng1122@gmail.com" aria-label="Email Victoria Cheng">
+                <span class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                <span class="contact-label">Email</span>
+              </a>
+              <a href="https://www.linkedin.com/in/victoria-chengyw/" target="_blank" rel="noopener noreferrer" aria-label="Victoria Cheng on LinkedIn">
+                <span class="contact-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                <span class="contact-label">LinkedIn</span>
+              </a>
+              <a href="https://sites.google.com/view/cheng-yung-wen-victoria/homepage?authuser=0" target="_blank" rel="noopener noreferrer" aria-label="Victoria Cheng's previous website">
+                <span class="contact-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+                <span class="contact-label">Website</span>
+              </a>
             </div>
           </div>
         </div>
