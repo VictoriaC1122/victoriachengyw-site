@@ -497,13 +497,6 @@ a:hover {
   font-size: 24px;
 }
 
-.experience-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px;
-  margin-top: 54px;
-}
-
 .compact-list,
 .selected-honors-list {
   list-style: none;
@@ -536,102 +529,42 @@ a:hover {
   line-height: 1.65;
 }
 
-.earlier-experience {
-  margin-top: 44px;
+.education-list {
+  border-top: 2px solid #c9b4cf;
 }
 
-.earlier-company-list {
+.education-item {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 14px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 34px;
+  padding: 30px 0;
+  border-bottom: 1px solid #f0ebe7;
 }
 
-.earlier-company {
-  min-width: 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--color-border);
+.education-item h2 {
+  margin-bottom: 6px;
+  font-size: 23px;
 }
 
-.earlier-company img {
-  display: block;
-  width: 82px;
-  height: 52px;
-  margin-bottom: 14px;
-  object-fit: contain;
-  object-position: left center;
-}
-
-.earlier-title {
-  margin: 0;
+.education-year {
+  padding-top: 5px;
   color: var(--color-accent);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
 }
 
-.earlier-company h4 {
-  margin: 0 0 4px;
-  color: #2d2d2d;
+.education-degree {
+  margin-bottom: 5px;
+  color: #3d393b;
   font-size: 17px;
-  font-weight: 700;
+  line-height: 1.6;
 }
 
-.earlier-company .meta {
-  margin-bottom: 8px;
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-.earlier-company p:last-child {
+.education-detail {
   margin: 0;
-  color: #5f5b59;
+  color: #6a6562;
   font-size: 14px;
   line-height: 1.65;
-}
-
-.role-details {
-  margin-top: 14px;
-}
-
-.role-details summary {
-  display: inline-flex;
-  min-height: 40px;
-  align-items: center;
-  padding: 8px 13px;
-  border: 1px solid #e3dce5;
-  border-radius: 6px;
-  background: #f8f5f8;
-  color: #674d6e;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  list-style: none;
-}
-
-.role-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.role-details summary:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
-}
-
-.role-details[open] .publication-toggle-icon {
-  margin-top: 3px;
-  transform: rotate(225deg);
-}
-
-.role-details ul {
-  margin: 14px 0 0;
-  padding-left: 20px;
-  color: #5f5b59;
-  font-size: 13px;
-  line-height: 1.65;
-}
-
-.role-details li {
-  margin-bottom: 8px;
 }
 
 .selected-honors {
@@ -662,6 +595,10 @@ a:hover {
 .selected-honors-list strong {
   font-size: 15px;
   line-height: 1.55;
+}
+
+.teaching-experience {
+  margin-top: 54px;
 }
 
 /* ============================
@@ -738,59 +675,21 @@ a:hover {
 ============================ */
 .research-lead {
   max-width: 820px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   color: #393638;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
-.research-themes {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  margin-bottom: 64px;
-}
-
-.research-theme {
-  padding-top: 18px;
-  border-top: 2px solid #c9b4cf;
-}
-
-.research-theme span {
-  display: block;
-  margin-bottom: 16px;
-  color: var(--color-accent);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.research-theme h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.research-theme p {
-  margin: 0;
-  color: #5f5b59;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
 .research-section-heading {
-  margin-bottom: 28px;
-  padding-top: 24px;
+  margin-bottom: 24px;
+  padding-top: 26px;
   border-top: 1px solid var(--color-border);
 }
 
 .research-section-heading h2 {
   margin: 0;
   font-size: 28px;
-}
-
-.publications-intro {
-  max-width: 780px;
-  margin-bottom: 34px;
-  color: #5f5b59;
 }
 
 .publication-list {
@@ -817,15 +716,10 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.publication-index,
 .publication-year {
   color: #77716e;
   font-size: 13px;
   font-weight: 700;
-}
-
-.publication-index {
-  margin-right: 2px;
 }
 
 .publication-badge {
@@ -862,25 +756,12 @@ a:hover {
   line-height: 1.45;
 }
 
-.publication-question {
-  max-width: 800px;
-  margin: -2px 0 14px;
-  color: #654f69;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.publication-citation,
-.publication-venue {
-  margin-bottom: 6px;
+.publication-citation {
+  max-width: 880px;
+  margin-bottom: 0;
   color: #4f4b49;
   font-size: 15px;
   line-height: 1.75;
-}
-
-.publication-venue {
-  margin-bottom: 16px;
-  color: #6a6562;
 }
 
 .author-self {
@@ -888,92 +769,6 @@ a:hover {
   font-weight: 700;
 }
 
-.publication-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.publication-link,
-.publication-abstract summary {
-  display: inline-flex;
-  min-height: 40px;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 15px;
-  border: 1px solid #e3dce5;
-  border-radius: 6px;
-  background: #f8f5f8;
-  color: #674d6e;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.4;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.publication-link:hover,
-.publication-abstract summary:hover {
-  border-color: #d6c8da;
-  background: #f1ebf2;
-  color: #5c4264;
-  opacity: 1;
-  box-shadow: 0 4px 12px rgba(86, 61, 92, 0.08);
-}
-
-.publication-abstract {
-  min-width: 0;
-}
-
-.publication-abstract summary {
-  list-style: none;
-}
-
-.publication-abstract summary::-webkit-details-marker {
-  display: none;
-}
-
-.publication-abstract summary:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
-}
-
-.publication-toggle-icon {
-  width: 7px;
-  height: 7px;
-  margin: -3px 1px 0 10px;
-  border-right: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
-  transform: rotate(45deg);
-  transform-origin: center;
-  transition: transform 0.2s ease;
-}
-
-.publication-abstract[open] {
-  flex: 1 0 100%;
-}
-
-.publication-abstract[open] .publication-toggle-icon {
-  margin-top: 3px;
-  transform: rotate(225deg);
-}
-
-.publication-abstract-copy {
-  max-width: 820px;
-  margin-top: 12px;
-  padding: 14px 16px;
-  border-left: 3px solid #cfbdd4;
-  background: #faf8fa;
-}
-
-.publication-abstract-copy p {
-  margin: 0;
-  color: #514c50;
-  font-size: 14px;
-  line-height: 1.75;
-}
 
 /* ============================
    Selected Projects
@@ -1598,43 +1393,12 @@ a:hover {
     gap: 34px;
   }
 
-  .research-themes,
-  .experience-columns,
   .selected-honors-list {
     grid-template-columns: 1fr;
   }
 
-  .research-themes {
-    gap: 24px;
-    margin-bottom: 52px;
-  }
-
-  .experience-columns {
-    gap: 42px;
-  }
-
-  .earlier-company-list {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .earlier-company {
-    display: grid;
-    grid-template-columns: 82px minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .earlier-company img {
-    margin-bottom: 0;
-  }
-
   .publication-item h3 {
     font-size: 21px;
-  }
-
-  .publication-link,
-  .publication-abstract summary {
-    min-height: 44px;
   }
 
   .photo-block {
@@ -1874,6 +1638,16 @@ a:hover {
     gap: 3px;
   }
 
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 24px 0;
+  }
+
+  .education-year {
+    padding-top: 0;
+  }
+
   .finance-credential {
     grid-template-columns: 1fr;
     gap: 4px;
@@ -1899,10 +1673,6 @@ a:hover {
     font-size: 13px;
   }
 
-  .role-details summary {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 360px) {
@@ -1929,9 +1699,6 @@ a:hover {
     font-size: 14px;
   }
 
-  .earlier-company {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (hover: none) {
@@ -1968,7 +1735,8 @@ a:hover {
       <nav class="tab-bar" role="tablist" aria-label="Profile sections">
         <button id="tab-about" class="tab-link active" type="button" role="tab" aria-selected="true" aria-controls="about" tabindex="0" data-tab="about">About</button>
         <button id="tab-research" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="research" tabindex="-1" data-tab="research">Research</button>
-        <button id="tab-experience" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="experience" tabindex="-1" data-tab="experience">Experience &amp; Education</button>
+        <button id="tab-education" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="education" tabindex="-1" data-tab="education">Education</button>
+        <button id="tab-experience" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="experience" tabindex="-1" data-tab="experience">Experience</button>
         <button id="tab-projects" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="projects" tabindex="-1" data-tab="projects">Selected Projects</button>
         <button id="tab-cv" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="cv" tabindex="-1" data-tab="cv">CV</button>
       </nav>
@@ -1978,7 +1746,8 @@ a:hover {
         <select id="mobile-tab-select" class="mobile-tab-select">
           <option value="about">About</option>
           <option value="research">Research</option>
-          <option value="experience">Experience &amp; Education</option>
+          <option value="education">Education</option>
+          <option value="experience">Experience</option>
           <option value="projects">Selected Projects</option>
           <option value="cv">CV</option>
         </select>
@@ -2023,6 +1792,18 @@ a:hover {
               close attention to language, narratives, and interpretation.
             </p>
 
+            <p>
+              Since 2023, I have served as a <strong>Doctoral Research Assistant</strong> at NTU, contributing to
+              projects on emerging technologies, firm strategy, and nonmarket environments. My work spans
+              qualitative, quantitative, archival, and case-based research.
+            </p>
+
+            <p>
+              I have also supported MBA and EMBA teaching in strategic management, global business, and brand
+              management. Beyond academia, I independently design and develop iOS applications, extending
+              analytical ideas into practical digital tools.
+            </p>
+
             <div class="icon-row" aria-label="Contact links">
               <a href="mailto:victoriacheng1122@gmail.com">Email</a>
               <a href="https://www.linkedin.com/in/victoria-chengyw/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -2060,18 +1841,110 @@ a:hover {
         </section>
       </section>
 
-      <!-- EXPERIENCE & EDUCATION -->
-      <section id="experience" class="tab-content" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
-        <h1>Experience &amp; Education</h1>
+      <!-- RESEARCH -->
+      <section id="research" class="tab-content" role="tabpanel" aria-labelledby="tab-research" tabindex="0" hidden>
+        <h1>Research</h1>
+        <div class="underline"></div>
+        <p class="research-lead">
+          My research examines how emerging technologies gain legitimacy and market acceptance under conditions
+          of technological and institutional uncertainty. I focus on how firms communicate innovation, construct
+          credibility, and shape pathways toward mainstream adoption.
+        </p>
+
+        <div class="research-section-heading">
+          <h2 id="selected-research-title">Publications &amp; Conference Presentations</h2>
+        </div>
+
+        <section class="publication-list" aria-labelledby="selected-research-title">
+          <article class="publication-item" aria-labelledby="publication-signal-title">
+            <div class="publication-topline">
+              <span class="publication-badge">Competitive Paper</span>
+              <span class="publication-year">2026</span>
+            </div>
+            <h3 id="publication-signal-title">Signal or Noise? Maturity-Adjusted Technical Disclosure and Multi-Stage Startup Funding Decisions</h3>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Wan, C.-Y. (2026). Competitive Paper, Academy of International Business Annual Meeting, Manchester.</p>
+          </article>
+
+          <article class="publication-item" aria-labelledby="publication-legitimacy-title">
+            <div class="publication-topline">
+              <span class="publication-badge publication-badge--interactive">Interactive Paper</span>
+              <span class="publication-year">2026</span>
+            </div>
+            <h3 id="publication-legitimacy-title">Legitimacy-First Innovation: How Emerging Technology Firms Construct Mainstream Pathways Under Institutional Ambiguity</h3>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2026). Interactive Paper, Academy of International Business Annual Meeting, Manchester.</p>
+          </article>
+
+          <article class="publication-item" aria-labelledby="publication-mainstream-title">
+            <div class="publication-topline">
+              <span class="publication-badge publication-badge--conference">Conference Paper</span>
+              <span class="publication-year">2024</span>
+            </div>
+            <h3 id="publication-mainstream-title">Exploring Mainstream Paths to New Technology Deployment: Technological, Market, and Network Perspectives</h3>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2024, June). Conference Paper, Academy of Asian Management, Miri, Malaysia.</p>
+          </article>
+        </section>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="tab-content" role="tabpanel" aria-labelledby="tab-education" tabindex="0" hidden>
+        <h1>Education</h1>
         <div class="underline"></div>
         <p class="section-intro">
-          Research and teaching are the center of my current work, supported by earlier experience in data
-          analytics, finance, and technology-oriented organizations.
+          My academic training brings together strategy, finance, international business, and the interpretive
+          sensitivity developed through the study of language and literature.
+        </p>
+
+        <section class="education-list" aria-label="Academic degrees">
+          <article class="education-item">
+            <div class="education-year">2023-Present</div>
+            <div>
+              <h2>National Taiwan University</h2>
+              <p class="education-degree">Ph.D. in International Business</p>
+              <p class="education-detail">College of Management · GPA 4.1/4.3</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-year">2020-2022</div>
+            <div>
+              <h2>Fu Jen Catholic University</h2>
+              <p class="education-degree">MBA in Financial Management</p>
+              <p class="education-detail">GPA 3.98/4.0</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-year">2015-2019</div>
+            <div>
+              <h2>Tamkang University</h2>
+              <p class="education-degree">B.A. in Chinese Literature and B.B.A. in International Business</p>
+              <p class="education-detail">Interdisciplinary training in language, markets, and international management</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="experience-subsection selected-honors" aria-labelledby="honors-title">
+          <p class="section-kicker">Recognition</p>
+          <h2 id="honors-title">Selected Honors</h2>
+          <ol class="selected-honors-list">
+            <li><span>2024 &amp; 2025</span><strong>Ministry of Education Ph.D. Scholarship ×2</strong></li>
+            <li><span>2022-2026</span><strong>Taiwan Rotary Academic Scholarship ×4</strong></li>
+            <li><span>2022</span><strong>Fiftieth TSC Thesis Award - Excellent Work</strong></li>
+            <li><span>Lifetime member</span><strong>Beta Gamma Sigma</strong></li>
+          </ol>
+        </section>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="tab-content" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
+        <h1>Research, Teaching &amp; Professional Experience</h1>
+        <div class="underline"></div>
+        <p class="section-intro">
+          My current academic work is supported by earlier professional experience across data analytics,
+          financial operations, regulatory strategy, and business transformation.
         </p>
 
         <section class="experience-subsection" aria-labelledby="current-experience-title">
-          <p class="section-kicker">Current Focus</p>
-          <h2 id="current-experience-title">Research &amp; Professional Experience</h2>
+          <p class="section-kicker">Selected Appointments</p>
+          <h2 id="current-experience-title">Research &amp; Industry Experience</h2>
 
         <article class="job-block">
           <div class="job-left">
@@ -2109,197 +1982,65 @@ a:hover {
           </div>
         </article>
 
-          <div class="earlier-experience">
-            <h3 class="earlier-title">Earlier Industry Experience</h3>
-            <div class="earlier-company-list">
-              <article class="earlier-company">
-                <img src="images/edenred-logo-200.png" width="200" height="128" alt="Edenred logo" loading="lazy" decoding="async" />
-                <div>
-                  <h4>Edenred (France)</h4>
-                  <p class="meta">Financial Billing &amp; Credit Collection · Sep-Dec 2022</p>
-                  <p>Supported financial reporting, process improvement, and cross-functional coordination.</p>
-                  <details class="role-details">
-                    <summary>Role details<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                    <ul>
-                      <li>Managed invoicing and payment processes while analyzing cash flow patterns and credit risk exposure.</li>
-                      <li>Developed process improvements and reporting frameworks to enhance financial transparency and efficiency.</li>
-                      <li>Created dashboards and SOPs to support financial decision-making and cross-department coordination.</li>
-                      <li>Acted as a liaison between internal teams and clients to ensure accurate financial communication.</li>
-                    </ul>
-                  </details>
-                </div>
-              </article>
-              <article class="earlier-company">
-                <img src="images/netgear-logo-200.png" width="200" height="90" alt="NETGEAR logo" loading="lazy" decoding="async" />
-                <div>
-                  <h4>NETGEAR (USA)</h4>
-                  <p class="meta">Regulatory Compliance Analyst Intern · Sep 2021-Mar 2022</p>
-                  <p>Analyzed international regulatory requirements and automated compliance reporting.</p>
-                  <details class="role-details">
-                    <summary>Role details<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                    <ul>
-                      <li>Conducted in-depth analysis of EU regulatory frameworks and their implications for product and business strategy.</li>
-                      <li>Automated compliance reporting processes using VBA, improving efficiency and reducing manual errors.</li>
-                      <li>Evaluated regulatory risks and ensured alignment with international standards.</li>
-                      <li>Supported internal knowledge transfer through technical documentation and training materials.</li>
-                    </ul>
-                  </details>
-                </div>
-              </article>
-              <article class="earlier-company">
-                <img src="images/air-liquide-logo-200.png" width="200" height="78" alt="Air Liquide logo" loading="lazy" decoding="async" />
-                <div>
-                  <h4>Air Liquide (France)</h4>
-                  <p class="meta">Business Transformation Data Analyst Intern · Jul-Aug 2021</p>
-                  <p>Developed data dashboards supporting operational analysis and business transformation.</p>
-                  <details class="role-details">
-                    <summary>Role details<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                    <ul>
-                      <li>Developed data-driven dashboards to support business transformation and operational optimization.</li>
-                      <li>Identified performance trends and provided insights for strategic decision-making.</li>
-                      <li>Assisted in cross-functional projects integrating data analysis with business execution.</li>
-                      <li>Supported internal initiatives including event coordination and content production.</li>
-                    </ul>
-                  </details>
-                </div>
-              </article>
-            </div>
+        <article class="job-block">
+          <div class="job-left">
+            <img src="images/edenred-logo-200.png" width="200" height="128" class="job-logo" alt="Edenred logo" loading="lazy" decoding="async" />
           </div>
+          <div class="job-right">
+            <h3>Edenred (France)</h3>
+            <p class="job-role">Financial Billing &amp; Credit Collection</p>
+            <p class="meta">Sep 2022 – Dec 2022 | Xinyi Dist., Taipei City, Taiwan (R.O.C.) | Full-time</p>
+            <ul>
+              <li>Managed invoicing and payment processes while analyzing cash flow patterns and credit risk exposure.</li>
+              <li>Developed process improvements and reporting frameworks to enhance financial transparency and efficiency.</li>
+              <li>Created dashboards and SOPs to support financial decision-making and cross-department coordination.</li>
+              <li>Acted as a liaison between internal teams and clients to ensure accurate financial communication.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job-block">
+          <div class="job-left">
+            <img src="images/netgear-logo-200.png" width="200" height="90" class="job-logo" alt="NETGEAR logo" loading="lazy" decoding="async" />
+          </div>
+          <div class="job-right">
+            <h3>NETGEAR (USA)</h3>
+            <p class="job-role">Regulatory Compliance Analyst (Intern)</p>
+            <p class="meta">Sep 2021 – Mar 2022 | Neihu Dist., Taipei City, Taiwan (R.O.C.) | Internship</p>
+            <ul>
+              <li>Conducted in-depth analysis of EU regulatory frameworks and their implications for product and business strategy.</li>
+              <li>Automated compliance reporting processes using VBA, improving efficiency and reducing manual errors.</li>
+              <li>Evaluated regulatory risks and ensured alignment with international standards.</li>
+              <li>Supported internal knowledge transfer through technical documentation and training materials.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job-block">
+          <div class="job-left">
+            <img src="images/air-liquide-logo-200.png" width="200" height="78" class="job-logo" alt="Air Liquide logo" loading="lazy" decoding="async" />
+          </div>
+          <div class="job-right">
+            <h3>Air Liquide (France)</h3>
+            <p class="job-role">Business Transformation Data Analyst (Intern)</p>
+            <p class="meta">Jul 2021 – Aug 2021 | Neihu Dist., Taipei City, Taiwan (R.O.C.) | Via ALFE 2021 International Summer Internship Program</p>
+            <ul>
+              <li>Developed data-driven dashboards to support business transformation and operational optimization.</li>
+              <li>Identified performance trends and provided insights for strategic decision-making.</li>
+              <li>Assisted in cross-functional projects integrating data analysis with business execution.</li>
+              <li>Supported internal initiatives including event coordination and content production.</li>
+            </ul>
+          </div>
+        </article>
         </section>
 
-        <div class="experience-columns">
-          <section class="experience-subsection" aria-labelledby="teaching-title">
-            <p class="section-kicker">Teaching</p>
-            <h2 id="teaching-title">MBA &amp; EMBA Programs</h2>
-            <ul class="compact-list">
-              <li><strong>National Taiwan University</strong><span>Strategic Management; Global Business Management; Global Brand Management; Management and Business Models of Taiwanese Enterprises</span></li>
-              <li><strong>Fu Jen Catholic University</strong><span>Strategic Management; Financial Management; Investment</span></li>
-            </ul>
-          </section>
-
-          <section class="experience-subsection" aria-labelledby="education-title">
-            <p class="section-kicker">Academic Training</p>
-            <h2 id="education-title">Education</h2>
-            <ul class="compact-list">
-              <li><strong>National Taiwan University</strong><span>Ph.D., International Business · 2023-Present · GPA 4.1/4.3</span></li>
-              <li><strong>Fu Jen Catholic University</strong><span>MBA, Financial Management · 2020-2022 · GPA 3.98/4.0</span></li>
-              <li><strong>Tamkang University</strong><span>BA, Chinese Literature; BBA, International Business · 2015-2019</span></li>
-            </ul>
-          </section>
-        </div>
-
-        <section class="experience-subsection selected-honors" aria-labelledby="honors-title">
-          <p class="section-kicker">Recognition</p>
-          <h2 id="honors-title">Selected Honors</h2>
-          <ol class="selected-honors-list">
-            <li><span>2024 &amp; 2025</span><strong>Ministry of Education Ph.D. Scholarship ×2</strong></li>
-            <li><span>Four awards</span><strong>Taiwan Rotary Academic Scholarship ×4</strong></li>
-            <li><span>2022</span><strong>Fiftieth TSC Thesis Award - Excellent Work</strong></li>
-            <li><span>Lifetime member</span><strong>Beta Gamma Sigma</strong></li>
-          </ol>
-        </section>
-      </section>
-
-      <!-- RESEARCH -->
-      <section id="research" class="tab-content" role="tabpanel" aria-labelledby="tab-research" tabindex="0" hidden>
-        <h1>Research</h1>
-        <div class="underline"></div>
-        <p class="research-lead">
-          My research examines how emerging technologies become credible, interpretable, and accepted when
-          established performance signals and market categories remain unsettled.
-        </p>
-
-        <div class="research-themes" aria-label="Research themes">
-          <section class="research-theme">
-            <span>01</span>
-            <h2>Technology &amp; Legitimacy</h2>
-            <p>How firms construct credibility for technologies that audiences do not yet fully understand.</p>
-          </section>
-          <section class="research-theme">
-            <span>02</span>
-            <h2>Innovation under Uncertainty</h2>
-            <p>How technological narratives shape evaluation when conventional evidence is incomplete.</p>
-          </section>
-          <section class="research-theme">
-            <span>03</span>
-            <h2>Market Formation</h2>
-            <p>How institutional expectations and stakeholder interpretation influence pathways to adoption.</p>
-          </section>
-        </div>
-
-        <div class="research-section-heading">
-          <p class="section-kicker">Selected Work</p>
-          <h2 id="selected-research-title">Publications &amp; Conference Presentations</h2>
-        </div>
-
-        <section class="publication-list" aria-labelledby="selected-research-title">
-          <article class="publication-item" aria-labelledby="publication-signal-title">
-            <div class="publication-topline">
-              <span class="publication-index">01</span>
-              <span class="publication-badge">Competitive Paper</span>
-              <span class="publication-year">2026</span>
-            </div>
-            <h3 id="publication-signal-title">Signal or Noise? Maturity-Adjusted Technical Disclosure and Multi-Stage Startup Funding Decisions</h3>
-            <p class="publication-question">When do technological narratives strengthen startup funding evaluations, and when do they become noise?</p>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Wan, C.-Y. (2026).</p>
-            <p class="publication-venue">Academy of International Business (AIB) 2026 Annual Meeting, Manchester.</p>
-            <div class="publication-links">
-              <details class="publication-abstract">
-                <summary>Abstract<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                <div class="publication-abstract-copy">
-                  <p>
-                    This study examines how early-stage technology ventures communicate technological capabilities to external audiences. It considers when technological narratives are interpreted as credible investment signals and when they instead introduce ambiguity into evaluation.
-                  </p>
-                </div>
-              </details>
-              <a class="publication-link" href="https://www.aib.world/events/2026-annual-meeting/" target="_blank" rel="noopener noreferrer">Conference</a>
-            </div>
-          </article>
-
-          <article class="publication-item" aria-labelledby="publication-legitimacy-title">
-            <div class="publication-topline">
-              <span class="publication-index">02</span>
-              <span class="publication-badge publication-badge--interactive">Interactive Paper</span>
-              <span class="publication-year">2026</span>
-            </div>
-            <h3 id="publication-legitimacy-title">Legitimacy-First Innovation: How Emerging Technology Firms Construct Mainstream Pathways Under Institutional Ambiguity</h3>
-            <p class="publication-question">How do emerging technology firms establish legitimacy before markets and institutions become settled?</p>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2026).</p>
-            <p class="publication-venue">Academy of International Business (AIB) 2026 Annual Meeting, Manchester.</p>
-            <div class="publication-links">
-              <details class="publication-abstract">
-                <summary>Abstract<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                <div class="publication-abstract-copy">
-                  <p>
-                    This research investigates how emerging technology firms build credibility under institutional and regulatory ambiguity. It treats legitimacy not as a byproduct of innovation, but as a condition that helps firms establish pathways toward mainstream adoption.
-                  </p>
-                </div>
-              </details>
-              <a class="publication-link" href="https://www.aib.world/events/2026-annual-meeting/" target="_blank" rel="noopener noreferrer">Conference</a>
-            </div>
-          </article>
-
-          <article class="publication-item" aria-labelledby="publication-mainstream-title">
-            <div class="publication-topline">
-              <span class="publication-index">03</span>
-              <span class="publication-badge publication-badge--conference">Conference Paper</span>
-              <span class="publication-year">2024</span>
-            </div>
-            <h3 id="publication-mainstream-title">Exploring Mainstream Paths to New Technology Deployment: Technological, Market, and Network Perspectives</h3>
-            <p class="publication-question">Which technological, market, and network conditions help new technologies move toward mainstream deployment?</p>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2024, June).</p>
-            <p class="publication-venue">Academy of Asian Management (AAOM), Miri, Malaysia.</p>
-            <div class="publication-links">
-              <details class="publication-abstract">
-                <summary>Abstract<span class="publication-toggle-icon" aria-hidden="true"></span></summary>
-                <div class="publication-abstract-copy">
-                  <p>
-                    This project explores how technological, market, and network conditions shape the pathways through which new technologies move toward mainstream deployment.
-                  </p>
-                </div>
-              </details>
-            </div>
-          </article>
+        <section class="experience-subsection teaching-experience" aria-labelledby="teaching-title">
+          <p class="section-kicker">Teaching</p>
+          <h2 id="teaching-title">MBA &amp; EMBA Programs</h2>
+          <ul class="compact-list">
+            <li><strong>National Taiwan University</strong><span>Strategic Management; Global Business Management; Global Brand Management; Management and Business Models of Taiwanese Enterprises</span></li>
+            <li><strong>Fu Jen Catholic University</strong><span>Strategic Management; Financial Management; Investment</span></li>
+          </ul>
         </section>
       </section>
 
@@ -2528,8 +2269,7 @@ a:hover {
     const validTabIds = new Set(tabLinks.map((button) => button.dataset.tab));
     const legacyTabIds = new Map([
       ["pubs", "research"],
-      ["education", "experience"],
-      ["honors", "experience"],
+      ["honors", "education"],
       ["extra", "projects"],
     ]);
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
