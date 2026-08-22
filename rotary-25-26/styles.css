@@ -5648,7 +5648,7 @@ body.page-activities .generated-plate {
     font-size: 0.86rem;
   }
 
-  /* Activities: make filters and cards scan like a mobile journal, not a shrunken timeline. */
+  /* Activities: keep a compact timeline while preserving room for the cards. */
   body.page-activities .archive-head {
     grid-template-columns: minmax(0, 1fr);
     gap: 15px;
@@ -5718,31 +5718,62 @@ body.page-activities .generated-plate {
   }
 
   body.page-activities .event-grid {
-    --timeline-rail-width: 0px;
-    gap: 14px;
-    padding-top: 0;
+    --timeline-rail-width: 24px;
+    gap: 18px;
+    padding-top: 8px;
   }
 
-  body.page-activities .event-grid::before,
-  body.page-activities .timeline-node {
-    display: none;
+  body.page-activities .event-grid::before {
+    display: block;
+    top: 8px;
+    bottom: 8px;
+    left: calc((var(--timeline-rail-width) / 2) - 1px);
+    width: 2px;
+    border-radius: 999px;
+    background: linear-gradient(
+      180deg,
+      rgba(202, 174, 122, 0.72),
+      rgba(169, 156, 211, 0.5) 52%,
+      rgba(151, 188, 225, 0.44)
+    );
   }
 
   body.page-activities .event-card {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
+    grid-template-columns: var(--timeline-rail-width) minmax(0, 1fr);
+    gap: 10px;
     animation: none;
   }
 
   body.page-activities .timeline-rail {
-    top: 10px;
-    left: 10px;
+    position: relative;
+    z-index: 3;
+    top: auto;
+    left: auto;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    padding-top: 22px;
+  }
+
+  body.page-activities .timeline-node {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-width: 3px;
+    box-shadow:
+      0 0 0 1px rgba(202, 174, 122, 0.28),
+      0 7px 16px rgba(96, 92, 128, 0.16);
   }
 
   body.page-activities .timeline-stamp {
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    left: calc(100% + 12px);
     min-height: 28px;
     padding: 0 9px;
     font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   body.page-activities .timeline-shell {
