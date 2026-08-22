@@ -34,6 +34,7 @@
   --champagne-strong: #e7d09e;
   --slate-soft: #ece8f6;
   --touch-target: 48px;
+  --font-site: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
 }
 
 *,
@@ -52,7 +53,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--font-site);
   line-height: 1.6;
   color: var(--ink);
   background:
@@ -397,7 +398,7 @@ a,
   background:
     linear-gradient(145deg, #fffafc 0%, #eef2fa 38%, #f2e9f6 68%, #f0dfc0 100%);
   color: #63607a;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 1.38rem;
   letter-spacing: 0.08em;
   box-shadow:
@@ -674,8 +675,8 @@ body.page-home .hero--home {
 .detail-section-head h3,
 .detail-meta h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
-  font-weight: 900;
+  font-family: var(--font-site);
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -860,7 +861,7 @@ body.page-home .hero-action-secondary:focus-visible {
 
 .hero-ledger-item strong {
   color: #605b7c;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 1.46rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -931,7 +932,7 @@ body.page-home .hero-action-secondary:focus-visible {
   display: block;
   margin-bottom: 5px;
   color: #5f5a79;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: clamp(2.05rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1;
@@ -989,7 +990,7 @@ body.page-home .hero-action-secondary:focus-visible {
 
 .hero-signature strong {
   color: #625d7d;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 1.65rem;
   letter-spacing: 0.03em;
 }
@@ -1277,7 +1278,7 @@ body.page-activities .hero-signature p {
   position: relative;
   z-index: 1;
   color: rgba(184, 154, 103, 0.74);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1287,7 +1288,7 @@ body.page-activities .hero-signature p {
   position: relative;
   z-index: 1;
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.34rem;
   line-height: 1.32;
   text-wrap: balance;
@@ -1415,7 +1416,7 @@ body.page-activities .hero-signature p {
 
 .portal-section h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(2rem, 3.2vw, 3rem);
   line-height: 1.2;
 }
@@ -1480,7 +1481,7 @@ body.page-home .manual-panel {
 
 .manual-panel h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(2rem, 3vw, 2.9rem);
   line-height: 1.22;
 }
@@ -1575,7 +1576,7 @@ body.page-home .manual-panel {
 }
 
 .manual-preview-copy strong {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.52rem;
   line-height: 1.3;
 }
@@ -1606,7 +1607,7 @@ body.page-home .manual-panel {
 
 .manual-reader-header h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(1.8rem, 2.8vw, 2.65rem);
   line-height: 1.2;
 }
@@ -1759,7 +1760,7 @@ body.page-home .manual-panel {
 
 .portal-index {
   color: rgba(220, 199, 160, 0.86);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1776,7 +1777,7 @@ body.page-home .manual-panel {
 
 .portal-body .portal-title {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.52rem;
   line-height: 1.3;
   text-wrap: balance;
@@ -1955,7 +1956,7 @@ body.page-home .portal-cta {
 }
 
 .page-feature-copy strong {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(1.9rem, 3vw, 2.9rem);
   line-height: 1.2;
 }
@@ -1980,7 +1981,7 @@ body.page-home .portal-cta {
 
 .leaders-section h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(2rem, 3.2vw, 3rem);
   line-height: 1.2;
 }
@@ -2047,7 +2048,7 @@ body.page-home .portal-cta {
 }
 
 .leaders-visual-copy strong {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 1.2;
 }
@@ -2086,7 +2087,7 @@ body.page-home .portal-cta {
 
 .leader-number {
   color: rgba(220, 199, 160, 0.88);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2110,7 +2111,7 @@ body.page-home .portal-cta {
 
 .leader-head h3 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.7rem;
   line-height: 1.3;
   text-wrap: balance;
@@ -2194,7 +2195,7 @@ body.page-home .portal-cta {
   padding: 0 0 0 16px;
   border-left: 3px solid rgba(207, 187, 151, 0.34);
   color: #605c73;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.02rem;
   line-height: 1.74;
 }
@@ -2255,7 +2256,7 @@ body.page-home .portal-cta {
 }
 
 .collage-caption strong {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.12rem;
   text-wrap: balance;
 }
@@ -2458,7 +2459,7 @@ body.page-home .portal-cta {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.94);
   color: var(--ink);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 1.22rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -2584,7 +2585,7 @@ body.page-home .portal-cta {
   display: block;
   position: relative;
   z-index: 1;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 2rem;
   letter-spacing: 0.08em;
 }
@@ -2609,7 +2610,7 @@ body.page-home .portal-cta {
   right: 24px;
   bottom: 24px;
   z-index: 1;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.48rem;
   line-height: 1.38;
 }
@@ -2700,7 +2701,7 @@ body.page-home .portal-cta {
 
 .card-body .card-title {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: 1.5rem;
   line-height: 1.32;
   text-wrap: balance;
@@ -2929,7 +2930,7 @@ body.page-home .portal-cta {
 }
 
 .detail-hero-badge strong {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-site);
   font-size: 2.1rem;
   letter-spacing: 0.06em;
 }
@@ -5144,7 +5145,7 @@ body.page-activities .detail-gallery {
 .detail-section-head h3 {
   margin: 0;
   color: var(--ink);
-  font-family: "Noto Serif TC", "Noto Serif", serif;
+  font-family: var(--font-site);
   font-size: clamp(1.42rem, 2vw, 1.8rem);
   line-height: 1.3;
 }
@@ -6500,7 +6501,7 @@ body.page-activities .detail-meta h2 {
   margin: 0;
   color: #3f3c4c;
   font-size: clamp(2.8rem, 4.8vw, 4.65rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.025em;
   text-wrap: balance;
@@ -6764,9 +6765,9 @@ body.page-activities .activity-block-date {
 
 body.page-activities .activity-block h3 {
   color: #403d4b;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-site);
   font-size: clamp(1.55rem, 2.2vw, 2rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.32;
 }
 
