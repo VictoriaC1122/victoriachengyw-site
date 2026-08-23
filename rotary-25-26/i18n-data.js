@@ -89,7 +89,7 @@
             },
             title: "2025–26 年度紀事",
             textHtml:
-              "北區與新北區 2025–26 年度活動、人物資料與交接手冊，集中收錄於此。",
+              "北區與新北區 2025–26 年度活動、人物資料與交接手冊。",
             actions: {
               primary: "活動紀錄",
               secondary: "會長簡介",
@@ -104,24 +104,24 @@
             alt: "2026 年雙北交接典禮大合照",
             label: "交接典禮",
             title: "2026.06.27 雙北交接典禮",
-            text: "2025–26 年度於此收束。",
+            text: "詠文與婉華於 2026 年 6 月卸任。",
           },
           archive: {
             eyebrow: "年度時間軸",
             title: "年度活動時間軸",
-            intro: "從 2025.06 到 2026.06，各月活動沿著同一條時間軸展開；點開後可看照片與活動介紹。",
+            intro: "收錄 2025 年 6 月至 2026 年 6 月的活動；點選月份可看活動介紹與照片。",
             filterAria: "年份篩選",
             filterHint: "手機可左右滑動",
           },
           portal: {
             aria: "首頁主要入口",
             eyebrow: "分頁導覽",
-            title: "活動、人物與手冊，各自安放在不同頁面。",
-            intro: "想看哪一部分，直接進去就好。",
+            title: "活動、會長簡介與交接手冊",
+            intro: "選擇要查看的內容。",
             activities: {
               kicker: "活動頁",
               title: "活動紀錄",
-              body: "沿月份收錄各場活動與相簿。",
+              body: "依月份收錄各場活動與相簿。",
               metaTimeline: "時間軸",
               metaPhotos: "活動照片",
               metaMobile: "活動內容",
@@ -148,9 +148,9 @@
           },
           manual: {
             eyebrow: "交接典禮手冊",
-            title: "手冊可直接翻閱，也可下載。",
+            title: "線上翻閱或下載手冊",
             introHtml:
-              "要對照活動名稱、日期或原始版面，可直接開啟 <strong>25-26 交接典禮手冊 PDF</strong>。",
+              "<strong>25-26 交接典禮手冊</strong> 列有活動正式名稱、日期與原始版面。",
             meta: {
               pdf: "完整手冊 PDF",
               view: "線上翻閱",
@@ -172,8 +172,8 @@
           },
           footnote: {
             eyebrow: "頁面說明",
-            title: "內容說明",
-            bodyHtml: "<strong>活動頁</strong> 收每個月份的照片與資料，<strong>會長介紹頁</strong> 則整理兩位會長的簡介與年度回顧。",
+            title: "網站內容",
+            bodyHtml: "<strong>活動頁</strong> 收錄各月份照片與資料；<strong>會長介紹頁</strong> 收錄兩位會長的簡介與年度回顧。",
           },
         },
         handbook: {
@@ -189,7 +189,7 @@
             },
             title: "25-26 交接典禮手冊",
             textHtml:
-              "<strong>25-26 交接典禮手冊</strong> 保留正式活動名稱、日期與原始版面，可直接翻閱，也可下載。",
+              "<strong>25-26 交接典禮手冊</strong> 收錄正式活動名稱、日期與原始版面，可線上翻閱或下載。",
             actions: {
               view: "線上翻閱",
               download: "下載 PDF",
@@ -205,7 +205,7 @@
           section: {
             eyebrow: "閱讀與下載",
             title: "線上翻閱，或下載。",
-            intro: "正式名稱、日期與手冊版面，都可在這裡對照。",
+            intro: "可對照正式名稱、日期與手冊原始版面。",
             metaAria: "手冊功能",
             actionsAria: "手冊操作",
             meta: {
@@ -228,7 +228,7 @@
           reader: {
             eyebrow: "完整手冊",
             title: "全 41 頁",
-            intro: "依原始版面排列，可直接往下閱讀。",
+            intro: "以下依手冊原始頁序排列。",
             pagesAria: "25-26 交接典禮手冊全文",
             pageAlt: "25-26 交接典禮手冊第 {page} 頁",
           },
@@ -247,9 +247,9 @@
               monthsValue: "2025.06—2026.06",
               sourceValue: "以手冊為主",
             },
-            title: "沿著時間軸，把這一年的活動慢慢看完。",
+            title: "2025–26 年度活動",
             textHtml:
-              "從 <strong>2025.06 到 2026.06</strong>，這一年的活動依時間整理。名稱和日期以交接典禮手冊為準，點開月份後可以看照片和附件。",
+              "收錄 <strong>2025.06 到 2026.06</strong> 的活動，名稱與日期以交接典禮手冊為準。",
             actions: {
               primary: "看年度活動",
             },
@@ -261,36 +261,36 @@
               fourth: "手冊頁面",
             },
             signature: {
-              label: "頁面摘要",
-              title: "每個月份都各自收好。",
-              text: "交接、幹訓、論壇、迎新和公益活動，都沿著時間慢慢排開。",
+              label: "活動內容",
+              title: "依月份排列",
+              text: "交接、幹訓、論壇、迎新和公益活動依日期排列。",
             },
           },
           spotlight: {
             first: {
-              title: "手冊對齊",
-              body: "名稱和日期都先對照交接典禮手冊。",
+              title: "名稱與日期",
+              body: "活動名稱和日期以交接典禮手冊為準。",
             },
             second: {
               title: "照片順序",
-              body: "先放大合照，再放兩位會長和最能代表活動的畫面。",
+              body: "相簿依序收錄大合照、兩位會長與活動照片。",
             },
             third: {
-              title: "手機順讀",
-              body: "一路往下滑就能看完整年，不用來回切頁。",
+              title: "手機版",
+              body: "全年活動依日期垂直排列。",
             },
           },
           archive: {
             eyebrow: "年度活動",
             title: "2025.06 — 2026.06 年度活動",
-            intro: "兩位會長詠文、婉華上任這一年來透過服務、時間軸來好好傳達活動，您可以點進各別活動參觀細節",
+            intro: "收錄詠文與婉華任內活動，點選活動可查看介紹、照片與資料。",
             filterAria: "活動類別篩選",
             filterHint: "左右滑動可切換類別",
           },
           footnote: {
             eyebrow: "資料來源",
             title: "資料註記",
-            body: "日期與正式名稱先以交接典禮手冊為準；若手冊僅列月份，便先保留月份。照片也以來源可確認的版本為主，之後若補到同場相簿，再一起更新。",
+            body: "活動日期與正式名稱以交接典禮手冊為準；手冊僅列月份時保留月份。照片採用來源可確認的版本。",
           },
         },
         leaders: {
@@ -331,22 +331,22 @@
           },
           spotlight: {
             first: {
-              title: "凝聚",
-              body: "把聯誼會帶成一個能一起做事、彼此支持的團隊。",
+              title: "團隊合作",
+              body: "兩區幹部共同規劃並執行年度活動。",
             },
             second: {
-              title: "傳承",
-              body: "從交接到迎新，把經驗和關係接續下去。",
+              title: "交接與迎新",
+              body: "交接會務，也協助新成員熟悉聯誼會。",
             },
             third: {
               title: "活動",
-              body: "用不同主題例會和公益活動，讓大家更有參與感。",
+              body: "年度內容包含主題例會、聯誼與公益服務。",
             },
           },
           section: {
             eyebrow: "會長資料",
             title: "2025-26 年度會長介紹",
-            intro: "兩位會長的資料都集中在這裡。",
+            intro: "收錄兩位會長的基本資料與年度回顧。",
           },
           labels: {
             service: "服務單位",
@@ -362,7 +362,7 @@
             awardValue: "21-22",
             careClubValue: "永和扶輪社",
             quote: "允許一切的發生，遇到問題，解決問題。",
-            summary: "手冊整理了她這一年的籌備與執行，也記下扶輪前輩、幹部和獎學生夥伴的協助。",
+            summary: "手冊記錄她任內的活動籌備、執行，以及扶輪前輩、幹部和獎學生夥伴的協助。",
           },
           victoria: {
             role: "新北區分會長",
@@ -371,8 +371,8 @@
             serviceValue: "國立臺灣大學",
             awardValue: "21-22・23-24・24-25・25-26",
             sponsorClubsValue: "台北和平社、板橋社、政愛社",
-            quote: "這裏不只是交流的平台，更是探索自我、實現夢想的起點。",
-            summary: "手冊整理了交接典禮、九份畢旅、幹部訓練和多場例會，也記下這一年的參與和分工。",
+            quote: "希望大家在聯誼會認識夥伴，也找到自己想做的事。",
+            summary: "手冊收錄她任內的交接典禮、九份畢旅、幹部訓練與多場例會。",
           },
         },
       },
@@ -476,24 +476,24 @@
             alt: "Group photo from the 2026 joint handover ceremony",
             label: "Handover ceremony",
             title: "2026.06.27 Joint Handover Ceremony",
-            text: "The 2025–26 year closes here.",
+            text: "Hannah and Victoria completed their terms in June 2026.",
           },
           archive: {
             eyebrow: "Year Timeline",
             title: "Yearly activity timeline",
-            intro: "From 2025.06 to 2026.06, each month sits on the same timeline, with event notes and photos waiting inside.",
+            intro: "Events from June 2025 to June 2026, with notes and photos for each month.",
             filterAria: "Year filters",
             filterHint: "Swipe to scroll",
           },
           portal: {
             aria: "Main home destinations",
             eyebrow: "Navigation",
-            title: "Three pages, three ways to read the year.",
-            intro: "Activities, profiles, and the handbook each keep their own rhythm.",
+            title: "Activities, leader profiles, and the handbook",
+            intro: "Choose a section to continue.",
             activities: {
               kicker: "Activities",
               title: "Activity Archive",
-              body: "Monthly events and albums, arranged in one archive.",
+              body: "Events and albums arranged by month.",
               metaTimeline: "Timeline",
               metaPhotos: "Event photos",
               metaMobile: "Event notes",
@@ -520,9 +520,9 @@
           },
           manual: {
             eyebrow: "Handover Handbook",
-            title: "The handbook can be read online or downloaded.",
+            title: "Read or download the handbook",
             introHtml:
-              "If you want to check the official event names, dates, or original layout, you can open the <strong>25-26 Handover Handbook PDF</strong> here.",
+              "The <strong>25-26 Handover Handbook</strong> contains official event names, dates, and original layouts.",
             meta: {
               pdf: "Full PDF",
               view: "Read online",
@@ -544,8 +544,8 @@
           },
           footnote: {
             eyebrow: "Page Notes",
-            title: "What's on each page",
-            bodyHtml: "The <strong>Activities</strong> page keeps each month's photos and materials, while the <strong>Leaders</strong> page gathers the two presidents' profiles and year notes.",
+            title: "Site contents",
+            bodyHtml: "The <strong>Activities</strong> page contains monthly photos and materials; the <strong>Leaders</strong> page contains both presidents' profiles and year notes.",
           },
         },
         handbook: {
@@ -577,7 +577,7 @@
           section: {
             eyebrow: "Read or Download",
             title: "Read online, or download the PDF.",
-            intro: "Use the links below when you want the handbook's official names, dates, and original layouts.",
+            intro: "Reference the handbook's official names, dates, and original layouts.",
             metaAria: "Handbook features",
             actionsAria: "Handbook actions",
             meta: {
@@ -600,7 +600,7 @@
           reader: {
             eyebrow: "Full Handbook",
             title: "All 41 Pages",
-            intro: "Presented in the original layout for reading on this page.",
+            intro: "Pages are presented in their original order.",
             pagesAria: "All pages of the 25-26 Handover Handbook",
             pageAlt: "Page {page} of the 25-26 Handover Handbook",
           },
@@ -619,9 +619,9 @@
               monthsValue: "2025.06–2026.06",
               sourceValue: "Handbook",
             },
-            title: "The year unfolds along a single timeline.",
+            title: "Activities, 2025–26",
             textHtml:
-              "This page follows the year from <strong>2025.06 to 2026.06</strong>. Names and dates follow the handover handbook, and each month opens to photos and supporting materials.",
+              "Activities from <strong>2025.06 to 2026.06</strong>, with names and dates based on the handover handbook.",
             actions: {
               primary: "See the timeline",
             },
@@ -633,36 +633,36 @@
               fourth: "Handbook portraits",
             },
             signature: {
-              label: "Overview",
-              title: "Each month keeps its own place.",
-              text: "Handover, training, forums, welcome events, and service projects all unfold in sequence.",
+              label: "Activity details",
+              title: "Arranged by month",
+              text: "Handover, training, forums, welcome events, and service projects are listed by date.",
             },
           },
           spotlight: {
             first: {
-              title: "Handbook-aligned",
-              body: "Official names and dates are matched to the handover handbook first.",
+              title: "Names and dates",
+              body: "Activity names and dates follow the handover handbook.",
             },
             second: {
               title: "Photo order",
-              body: "Group photos come first, followed by Hannah, Victoria, and the clearest event moments.",
+              body: "Albums list group photos first, followed by Hannah, Victoria, and event photos.",
             },
             third: {
-              title: "Mobile reading",
-              body: "Scroll straight down the year without jumping between pages.",
+              title: "Mobile layout",
+              body: "Annual activities are listed vertically by date.",
             },
           },
           archive: {
             eyebrow: "Year Timeline",
             title: "Annual activities, 2025.06–2026.06",
-            intro: "Follow Victoria and Hannah's year of service along the timeline, and open any event to explore the details.",
+            intro: "Activities from Victoria and Hannah's terms. Select an event for details, photos, and materials.",
             filterAria: "Event category filters",
             filterHint: "Swipe to switch categories",
           },
           footnote: {
             eyebrow: "Source Notes",
             title: "Archive Notes",
-            body: "Dates and official names follow the handover handbook. If the handbook only lists a month, the month is kept as-is. Photos begin with the most reliable source available and are updated when event albums are found.",
+            body: "Dates and official names follow the handover handbook. When only a month is listed, the month is retained. Photos use sources that can be verified.",
           },
         },
         leaders: {
@@ -703,22 +703,22 @@
           },
           spotlight: {
             first: {
-              title: "Community",
-              body: "They led the fellowship as a team that can work together and support one another.",
+              title: "Teamwork",
+              body: "Officers from both chapters planned and ran the year's events together.",
             },
             second: {
-              title: "Passing it on",
-              body: "From handover to welcome events, the year kept relationships and experience moving forward.",
+              title: "Handover and welcome events",
+              body: "They transferred responsibilities and helped new members get oriented.",
             },
             third: {
               title: "Activities",
-              body: "Different meetings and service projects kept members involved throughout the year.",
+              body: "The year included themed meetings, social events, and service projects.",
             },
           },
           section: {
             eyebrow: "Profiles",
             title: "2025-26 Leaders",
-            intro: "Both leaders are introduced on this page.",
+            intro: "Profiles and year notes for both leaders.",
           },
           labels: {
             service: "Organization",
@@ -733,8 +733,8 @@
             serviceValue: "KGI Securities, City Hall Branch · Associate Vice President",
             awardValue: "21-22",
             careClubValue: "Yonghe Rotary Club",
-            quote: "Allow things to unfold. When a problem comes up, solve it.",
-            summary: "The handbook records her planning and execution throughout the year, along with support from Rotary mentors, officers, and scholarship friends.",
+            quote: "Let things happen. When a problem comes up, solve it.",
+            summary: "The handbook records the events she planned and carried out during her term, with support from Rotary mentors, officers, and scholarship friends.",
           },
           victoria: {
             role: "President, New Taipei",
@@ -743,9 +743,9 @@
             serviceValue: "National Taiwan University",
             awardValue: "21-22 · 23-24 · 24-25 · 25-26",
             sponsorClubsValue: "Taipei Harmony, Banqiao, and Cheng-Ai Rotary Clubs",
-            quote: "This is more than a place to meet people. It can also be where you find your direction and begin what matters to you.",
+            quote: "I hope members meet good people here and find something they want to pursue.",
             
-            summary: "The handbook records the handover ceremony, Jiufen trip, leadership training, and the themed meetings she helped lead through the year.",
+            summary: "The handbook records the handover ceremony, Jiufen trip, leadership training, and meetings held during her term.",
           },
         },
       },
