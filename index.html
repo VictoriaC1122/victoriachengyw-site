@@ -1849,7 +1849,7 @@ a:hover {
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="page-bg">
-    <main id="main-content" class="page-card">
+    <main id="main-content" class="page-card" tabindex="-1">
 
       <!-- Tabs -->
       <nav class="tab-bar" role="tablist" aria-label="Profile sections">
@@ -2435,6 +2435,8 @@ a:hover {
     const tabLinks = Array.from(document.querySelectorAll(".tab-link"));
     const tabContents = Array.from(document.querySelectorAll(".tab-content"));
     const mobileTabSelect = document.querySelector("#mobile-tab-select");
+    const skipLink = document.querySelector(".skip-link");
+    const mainContent = document.querySelector("#main-content");
     const validTabIds = new Set(tabLinks.map((button) => button.dataset.tab));
     const projectSectionIds = new Set([
       "activity-apps",
@@ -2550,6 +2552,12 @@ a:hover {
 
     mobileTabSelect.addEventListener("change", () => {
       activateTab(mobileTabSelect.value, { updateUrl: true, scrollToPanel: true });
+    });
+
+    skipLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      mainContent.focus({ preventScroll: true });
+      mainContent.scrollIntoView({ behavior: "auto", block: "start" });
     });
 
     document.querySelectorAll(".activity-overview a").forEach((link) => {
