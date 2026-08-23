@@ -882,44 +882,60 @@ a:hover {
 }
 
 .activity-overview {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
-  margin: 36px 0 8px;
+  max-width: 620px;
+  margin: 32px 0 8px;
   padding: 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 
 .activity-overview li {
-  min-width: 0;
-  padding: 18px 16px 20px;
-  border-right: 1px solid var(--color-border);
-}
-
-.activity-overview li:first-child {
-  padding-left: 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .activity-overview li:last-child {
-  border-right: 0;
-  padding-right: 0;
+  border-bottom: 0;
 }
 
-.activity-overview span {
-  display: block;
-  margin-bottom: 4px;
+.activity-overview a {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 24px;
+  gap: 14px;
+  align-items: center;
+  min-height: 58px;
+  padding: 11px 8px;
+  color: #2d2d2d;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.activity-overview a:hover {
+  background: #faf7fa;
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.overview-index {
   color: var(--color-accent);
   font-size: 13px;
   font-weight: 700;
 }
 
 .activity-overview strong {
-  display: block;
-  color: #2d2d2d;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 1.45;
+}
+
+.overview-arrow {
+  width: 8px;
+  height: 8px;
+  justify-self: center;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  color: #9a879f;
+  transform: rotate(45deg);
 }
 
 .activity-section {
@@ -928,6 +944,7 @@ a:hover {
   --activity-button-border: #dbe3ea;
   --activity-button-text: #455d70;
   --activity-button-hover: #e8eef3;
+  scroll-margin-top: 78px;
   padding: 64px 0;
   border-bottom: 1px solid var(--color-border);
 }
@@ -1531,28 +1548,6 @@ a:hover {
   .job-logo {
     width: 70px;
     height: 70px;
-  }
-
-  .activity-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .activity-overview li,
-  .activity-overview li:first-child,
-  .activity-overview li:last-child {
-    padding: 15px 12px;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .activity-overview li:nth-child(2n) {
-    border-right: 0;
-  }
-
-  .activity-overview li:last-child {
-    grid-column: 1 / -1;
-    border-right: 0;
-    border-bottom: 0;
   }
 
   .activity-section {
@@ -2211,12 +2206,30 @@ a:hover {
         </p>
 
         <ol class="activity-overview" aria-label="Selected projects overview">
-          <li><span>01</span><strong>App Development</strong></li>
-          <li><span>02</span><strong>Community Leadership</strong></li>
-          <li><span>03</span><strong>Applied Analysis</strong></li>
+          <li>
+            <a href="#activity-apps">
+              <span class="overview-index">01</span>
+              <strong>App Development</strong>
+              <span class="overview-arrow" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#activity-volunteer">
+              <span class="overview-index">02</span>
+              <strong>Community Leadership</strong>
+              <span class="overview-arrow" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#activity-finance">
+              <span class="overview-index">03</span>
+              <strong>Applied Analysis</strong>
+              <span class="overview-arrow" aria-hidden="true"></span>
+            </a>
+          </li>
         </ol>
 
-        <section class="activity-section activity-section--apps" aria-labelledby="activity-apps-title">
+        <section id="activity-apps" class="activity-section activity-section--apps" aria-labelledby="activity-apps-title">
           <div class="activity-heading">
             <span class="activity-number" aria-hidden="true">01</span>
             <div>
@@ -2282,7 +2295,7 @@ a:hover {
           </div>
         </section>
 
-        <section class="activity-section activity-section--volunteer" aria-labelledby="activity-volunteer-title">
+        <section id="activity-volunteer" class="activity-section activity-section--volunteer" aria-labelledby="activity-volunteer-title">
           <div class="activity-heading">
             <span class="activity-number" aria-hidden="true">02</span>
             <div>
@@ -2317,7 +2330,7 @@ a:hover {
           </div>
         </section>
 
-        <section class="activity-section activity-section--finance" aria-labelledby="activity-finance-title">
+        <section id="activity-finance" class="activity-section activity-section--finance" aria-labelledby="activity-finance-title">
           <div class="activity-heading">
             <span class="activity-number" aria-hidden="true">03</span>
             <div>
@@ -2423,6 +2436,11 @@ a:hover {
     const tabContents = Array.from(document.querySelectorAll(".tab-content"));
     const mobileTabSelect = document.querySelector("#mobile-tab-select");
     const validTabIds = new Set(tabLinks.map((button) => button.dataset.tab));
+    const projectSectionIds = new Set([
+      "activity-apps",
+      "activity-volunteer",
+      "activity-finance",
+    ]);
     const legacyTabIds = new Map([
       ["pubs", "research"],
       ["honors", "education"],
@@ -2436,7 +2454,25 @@ a:hover {
         return hashId;
       }
 
+      if (projectSectionIds.has(hashId)) {
+        return "projects";
+      }
+
       return legacyTabIds.get(hashId) || "about";
+    }
+
+    function activateLocation() {
+      const hashId = window.location.hash.slice(1);
+      activateTab(requestedTabId());
+
+      if (projectSectionIds.has(hashId)) {
+        window.requestAnimationFrame(() => {
+          document.getElementById(hashId)?.scrollIntoView({
+            behavior: "auto",
+            block: "start",
+          });
+        });
+      }
     }
 
     function activateTab(targetId, options = {}) {
@@ -2514,6 +2550,25 @@ a:hover {
 
     mobileTabSelect.addEventListener("change", () => {
       activateTab(mobileTabSelect.value, { updateUrl: true, scrollToPanel: true });
+    });
+
+    document.querySelectorAll(".activity-overview a").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const target = document.querySelector(link.getAttribute("href"));
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+        if (window.location.hash !== link.hash) {
+          window.history.pushState({ tab: "projects", section: target.id }, "", link.hash);
+        }
+        target.scrollIntoView({
+          behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+          block: "start",
+        });
+      });
     });
 
     document.querySelectorAll("[data-document-carousel]").forEach((carousel) => {
@@ -2629,9 +2684,9 @@ a:hover {
       updateDocumentState(0);
     });
 
-    window.addEventListener("popstate", () => activateTab(requestedTabId()));
-    window.addEventListener("hashchange", () => activateTab(requestedTabId()));
-    activateTab(requestedTabId());
+    window.addEventListener("popstate", activateLocation);
+    window.addEventListener("hashchange", activateLocation);
+    activateLocation();
   </script>
 </body>
 </html>
