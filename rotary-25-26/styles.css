@@ -392,6 +392,7 @@ a,
 .brand-mark {
   display: inline-grid;
   place-items: center;
+  box-sizing: border-box;
   width: 56px;
   height: 56px;
   border-radius: 20px;
@@ -399,8 +400,11 @@ a,
     linear-gradient(145deg, #fffafc 0%, #eef2fa 38%, #f2e9f6 68%, #f0dfc0 100%);
   color: #63607a;
   font-family: var(--font-site);
-  font-size: 1.38rem;
-  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.6),
     0 8px 20px rgba(88, 84, 114, 0.14);
@@ -5401,7 +5405,7 @@ body.page-activities .generated-plate {
     width: 46px;
     height: 46px;
     border-radius: 16px;
-    font-size: 1.16rem;
+    font-size: 0.76rem;
   }
 
   .brand-copy {
@@ -6104,7 +6108,7 @@ body.page-activities .generated-plate {
     width: 42px;
     height: 42px;
     border-radius: 14px;
-    font-size: 1.02rem;
+    font-size: 0.7rem;
   }
 
   .brand-copy strong,
