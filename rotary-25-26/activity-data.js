@@ -219,7 +219,6 @@
           "Group photo from the Jiufen trip.",
         ),
       ],
-      links: [createLocalizedLink("下載交接典禮手冊 PDF", "Download the handover handbook PDF", "assets/downloads/handover-manual-2025.pdf", { download: true })],
     }),
     createPhotoEvent({
       id: "2025-07",
