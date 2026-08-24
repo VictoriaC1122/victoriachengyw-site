@@ -26,6 +26,7 @@ const refs = {
   detailInfo: document.getElementById("detailInfo"),
   detailTags: document.getElementById("detailTags"),
   detailLinks: document.getElementById("detailLinks"),
+  detailGallerySection: document.getElementById("detailGallerySection"),
   detailGallery: document.getElementById("detailGallery"),
 };
 
@@ -101,22 +102,26 @@ function getResultsMessage(count) {
 function getDetailInfoItems(event) {
   return [
     {
-      label: t("common.archive.info.folder"),
-      value: event.folder,
-    },
-    {
+      id: "date",
       label: t("common.archive.info.date"),
       value: event.dateLabel,
     },
     {
+      id: "location",
       label: t("common.archive.info.location"),
       value: event.location,
     },
     {
+      id: "folder",
+      label: t("common.archive.info.folder"),
+      value: event.folder,
+    },
+    {
+      id: "summary",
       label: t("common.archive.info.summary"),
       value: event.materialStatus,
     },
-  ];
+  ].filter((item) => item.value);
 }
 
 function renderVisual(cover, title, options = {}) {
@@ -251,11 +256,20 @@ function renderCards() {
 
 function renderInfoCard(item) {
   return `
-    <article class="info-card">
+    <article class="info-card info-card--${escapeHtml(item.id)}">
       <span>${escapeHtml(item.label)}</span>
       <p>${escapeHtml(item.value)}</p>
     </article>
   `;
+}
+
+function renderOptionalRegion(element, markup) {
+  if (!element) {
+    return;
+  }
+
+  element.innerHTML = markup;
+  element.hidden = !markup;
 }
 
 function renderDetailInfo(event) {
@@ -299,9 +313,9 @@ function renderActivityBlock(block) {
     <article class="activity-block${hasVisual ? " activity-block--with-visual" : ""}">
       ${visual}
       <div class="activity-block-content">
-        <p class="activity-block-date">${escapeHtml(block.date)}</p>
-        <h3>${escapeHtml(block.title)}</h3>
-        <p>${escapeHtml(block.summary)}</p>
+        ${block.date ? `<p class="activity-block-date">${escapeHtml(block.date)}</p>` : ""}
+        <h4>${escapeHtml(block.title)}</h4>
+        ${block.summary ? `<p>${escapeHtml(block.summary)}</p>` : ""}
         ${detailList}
         ${tags.length ? `<div class="activity-block-tags">${renderList(tags, renderTag)}</div>` : ""}
       </div>
@@ -348,7 +362,7 @@ function renderGalleryItem(item) {
           loading="lazy"
           decoding="async"
         />
-        <figcaption>${escapeHtml(item.caption)}</figcaption>
+        ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
       </figure>
     `;
   }
@@ -365,7 +379,7 @@ function renderGalleryItem(item) {
         >
           <source src="${escapeHtml(item.src)}" type="video/mp4" />
         </video>
-        <figcaption>${escapeHtml(item.caption || "")}</figcaption>
+        ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
       </figure>
     `;
   }
@@ -426,9 +440,12 @@ function populateDetail(event) {
   refs.detailTitle.textContent = event.title;
   refs.detailSummary.textContent = event.summary;
   renderDetailActivities(event);
-  refs.detailTags.innerHTML = renderList(event.highlights, renderTag);
-  refs.detailLinks.innerHTML = renderDetailLinks(event.links);
-  refs.detailGallery.innerHTML = renderList(event.gallery, renderGalleryItem);
+  renderOptionalRegion(refs.detailTags, renderList(event.highlights, renderTag));
+  renderOptionalRegion(refs.detailLinks, renderDetailLinks(event.links));
+  renderOptionalRegion(refs.detailGallery, renderList(event.gallery, renderGalleryItem));
+  if (refs.detailGallerySection) {
+    refs.detailGallerySection.hidden = !event.gallery.length;
+  }
   renderDetailInfo(event);
 }
 
