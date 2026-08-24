@@ -104,7 +104,7 @@
             alt: "2026 年雙北交接典禮大合照",
             label: "交接典禮",
             title: "2026.06.27 雙北交接典禮",
-            text: "詠文與婉華於 2026 年 6 月卸任。",
+            text: "詠文與婉華於 2026 年 6 月上任，並於 2026 年 6 月卸任。",
           },
           archive: {
             eyebrow: "年度時間軸",
@@ -476,7 +476,7 @@
             alt: "Group photo from the 2026 joint handover ceremony",
             label: "Handover ceremony",
             title: "2026.06.27 Joint Handover Ceremony",
-            text: "Hannah and Victoria completed their terms in June 2026.",
+            text: "Hannah and Victoria took office in June 2026 and completed their terms in June 2026.",
           },
           archive: {
             eyebrow: "Year Timeline",
