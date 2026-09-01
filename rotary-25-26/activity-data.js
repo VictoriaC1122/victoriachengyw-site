@@ -95,9 +95,9 @@
     });
   }
 
-  function reportGallery(prefix, count, zhTwAlt, enAlt, zhTwCaption, enCaption) {
+  function reportGallery(prefix, count, zhTwAlt, enAlt, zhTwCaption, enCaption, startAt = 1) {
     return Array.from({ length: count }, (_, index) => {
-      const photoNumber = index + 1;
+      const photoNumber = startAt + index;
 
       return galleryImage(
         `assets/photos/${prefix}-${padNumber(photoNumber)}.jpg`,
@@ -269,7 +269,7 @@
         ["晴雨版本", "Sunny and rainy plans"],
         ["年度默契", "Team chemistry"],
       ),
-      frameCountLabel: localized("8 筆內容", "8 items"),
+      frameCountLabel: localized("6 筆內容", "6 items"),
       availability: localized(
         "已整理 Day 1 室內版、Day 2 晴天版與雨天版行程，也補上現場照片與短片。",
         "Day 1, Day 2 sunny, and Day 2 rainy itineraries are now organized here alongside photos and short videos from the training.",
@@ -354,14 +354,6 @@
           "Formal group photo from the leadership training",
           "幹部訓練正式合影。",
           "Formal group photo from the leadership training.",
-        ),
-        ...reportGallery(
-          "annual-2025-07",
-          5,
-          "宜蘭幹部訓練活動紀錄",
-          "Yilan leadership training photo",
-          "宜蘭幹部訓練。",
-          "Leadership training in Yilan.",
         ),
         galleryImage(
           "assets/photos/july-training-day1-indoor-itinerary.jpg",
@@ -539,11 +531,12 @@
         ),
         ...reportGallery(
           "annual-2025-09",
-          4,
+          3,
           "扶輪聲林之王活動紀錄",
           "Rotary Singing Night photo",
           "扶輪聲林之王活動現場。",
           "Rotary Singing Night.",
+          2,
         ),
         galleryImage(
           "assets/photos/sep-singing-stage-female.jpg",
@@ -957,7 +950,7 @@
         ),
         ...reportGallery(
           "annual-2025-11-blood",
-          5,
+          3,
           "捐血公益例會活動紀錄",
           "Blood donation meeting photo",
           "捐血公益例會。",

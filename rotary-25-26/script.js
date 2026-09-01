@@ -373,7 +373,7 @@ function renderGalleryItem(item) {
         <video
           controls
           playsinline
-          preload="metadata"
+          preload="none"
           ${item.poster ? `poster="${escapeHtml(item.poster)}"` : ""}
           aria-label="${escapeHtml(item.alt || item.caption || "")}"
         >
