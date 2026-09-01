@@ -8051,6 +8051,7 @@ body.page-activities .detail-summary {
   color: #696573;
   font-size: clamp(1rem, 0.3vw + 0.96rem, 1.12rem);
   line-height: 1.86;
+  white-space: pre-line;
 }
 
 body.page-activities .detail-hero {

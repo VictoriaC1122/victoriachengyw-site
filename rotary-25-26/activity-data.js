@@ -95,6 +95,20 @@
     });
   }
 
+  function reportGallery(prefix, count, zhTwAlt, enAlt, zhTwCaption, enCaption) {
+    return Array.from({ length: count }, (_, index) => {
+      const photoNumber = index + 1;
+
+      return galleryImage(
+        `assets/photos/${prefix}-${padNumber(photoNumber)}.jpg`,
+        `${zhTwAlt} ${photoNumber}`,
+        `${enAlt} ${photoNumber}`,
+        zhTwCaption,
+        enCaption,
+      );
+    });
+  }
+
   function createEvent(config) {
     return {
       highlights: [],
@@ -175,7 +189,7 @@
       month: 6,
       order: 1,
       title: localized("北區與新北區聯合交接典禮・九份畢旅", "Joint Handover Ceremony & Jiufen Trip"),
-      subtitle: localized("6 月舉行交接典禮與九份畢旅。", "June includes the handover ceremony and the Jiufen trip."),
+      subtitle: localized("年度從交接典禮與九份畢旅揭開序幕。", "The year opens with the handover ceremony and the Jiufen trip."),
       folder: localized("6月活動＿交接典禮＆九份畢旅", "June Activities — Handover Ceremony & Jiufen Trip"),
       date: localized("2025/6/28 聯合交接典禮・2025/6/28-29 九份畢旅", "2025/6/28 Joint Handover Ceremony · 2025/6/28-29 Jiufen Trip"),
       location: localized("交接典禮 / 九份", "Handover Ceremony / Jiufen"),
@@ -183,18 +197,18 @@
       coverSrc: "assets/photos/june-handover-handbook-cover.jpg",
       coverAlt: localized("6月交接典禮手冊人物合照", "June handbook portrait from the handover ceremony"),
       summary: localized(
-        "6 月先舉行北區與新北區聯合交接典禮，接著前往九份畢旅。",
-        "June begins with the joint handover ceremony for Taipei North and New Taipei, followed by the Jiufen trip.",
+        "新年度從一場交接與旅行正式開始。婉華與詠文接下北區、新北區的責任後，和夥伴們一同前往九份展開兩天一夜的旅程。走進老街、品嚐在地美食，也在茶樓裡喝茶聊天，在不同於正式例會的輕鬆氛圍中拉近彼此距離。這趟旅行既是上一段旅程的紀念，也是新團隊第一次共同出發，為接下來的一年寫下開場。",
+        "The new Rotary year began with a handover and a trip. After Hannah and Victoria took on their roles in Taipei North and New Taipei, the group set out for two days in Jiufen. They walked the old streets, shared local food, and talked over tea in a setting far removed from a formal meeting. The trip marked both a farewell to the previous year and the new team's first journey together.",
       ),
       highlights: localizedList(
         ["年度交接", "Handover"],
         ["九份畢旅", "Jiufen trip"],
         ["兩位會長", "Both presidents"],
-        ["年度首月", "Opening month"],
+        ["年度起點", "Opening chapter"],
       ),
       availability: localized(
-        "本月收錄交接典禮與九份畢旅的行程和照片。",
-        "This month includes the schedules and photos from the handover ceremony and Jiufen trip.",
+        "交接與畢旅都收在這個月份裡，也替新年度留下最初的合照與行程。",
+        "The handover and trip sit together in this opening month, leaving the first group photos and first shared itinerary of the year.",
       ),
       gallery: [
         galleryImage(
@@ -203,6 +217,14 @@
           "Portrait from the handover handbook",
           "交接典禮人物合照。",
           "Portrait from the handover ceremony handbook.",
+        ),
+        ...reportGallery(
+          "annual-2025-06",
+          5,
+          "聯合交接典禮與九份畢旅活動紀錄",
+          "Joint handover and Jiufen trip photo",
+          "聯合交接典禮與九份畢旅。",
+          "Joint handover ceremony and Jiufen trip.",
         ),
         galleryImage(
           "assets/photos/june-handover-handbook-page-web.jpg",
@@ -237,28 +259,28 @@
       coverSrc: "assets/photos/july-training-handbook-cover.jpg",
       coverAlt: localized("7月幹部訓練正式合影", "Formal group photo from the July leadership training"),
       summary: localized(
-        "7 月在宜蘭舉行兩天一夜幹部訓練。Day 1 安排例會與團隊活動，Day 2 依天氣採海線或雨備行程。",
-        "The two-day leadership training takes place in Yilan in July. Day 1 includes the meeting and team activities, while Day 2 follows either the coastal or rainy-day plan.",
+        "為了迎接接下來一整年的活動，雙北幹部來到宜蘭進行兩天一夜的幹部訓練。除了透過例會進一步了解聯誼會運作，行程也安排分組戲水、唱歌、烤肉與交流活動。從白天的團隊合作一路聊到晚上，大家在相處中逐漸找到默契，也從一群剛開始合作的夥伴，慢慢成為能夠一起規劃、一起執行活動的團隊。",
+        "To prepare for the year ahead, the Taipei North and New Taipei teams spent two days training together in Yilan. Formal sessions introduced the fellowship's work, while water games, singing, a barbecue, and evening conversations gave everyone time to learn how to work together. By the end of the trip, a newly formed committee had begun to feel like a team ready to plan and run the year's activities.",
       ),
       highlights: localizedList(
         ["幹部訓練", "Leadership training"],
         ["宜蘭", "Yilan"],
         ["兩天一夜", "Overnight"],
         ["晴雨版本", "Sunny and rainy plans"],
-        ["幹部交流", "Team exchange"],
+        ["年度默契", "Team chemistry"],
       ),
       frameCountLabel: localized("8 筆內容", "8 items"),
       availability: localized(
-        "收錄 Day 1 室內行程、Day 2 晴天與雨天行程，以及現場照片和短片。",
-        "Includes the Day 1 indoor schedule, Day 2 sunny and rainy plans, photos, and short videos.",
+        "已整理 Day 1 室內版、Day 2 晴天版與雨天版行程，也補上現場照片與短片。",
+        "Day 1, Day 2 sunny, and Day 2 rainy itineraries are now organized here alongside photos and short videos from the training.",
       ),
       activityBlocks: [
         {
           date: localized("Day 1｜2025/7/19", "Day 1 · 2025/7/19"),
           title: localized("Day 1 室內版", "Day 1 · Indoor Program"),
           summary: localized(
-            "上午各車陸續出發，中午在羅東用餐，午後於芯園茶屋舉行例會、下午茶與分組戲水競賽；晚上安排唱歌、烤肉與交流。",
-            "Cars departed through the morning, followed by lunch in Luodong. The afternoon included a formal session, tea, and team water games at Xinyuan Tea House, with singing, barbecue, and conversation in the evening.",
+            "上午各車陸續出發，中午先在羅東用餐，午後於芯園茶屋展開例會與下午茶，接著換裝進行分組戲水競賽；晚上則以唱歌、烤肉與夜間交流收尾。",
+            "Cars departed through the morning, lunch followed in Luodong, and the afternoon moved into the formal session at Xinyuan Tea House, afternoon tea, and team water games. The evening closed with singing, barbecue, and time together.",
           ),
           details: localizedList(
             ["09:00–10:00｜各車出發", "09:00–10:00 · Departures by car"],
@@ -313,7 +335,7 @@
             ["午餐｜宜蘭湯蒸火鍋店（太飽可略）", "Lunch · Yilan Tangzheng Hot Pot (optional if everyone is too full)"],
             ["13:00–14:00｜Woosh Cafe × 半日森或宜蘭傳藝園區", "13:00–14:00 · Woosh Cafe x Halfday or the Yilan Traditional Arts Center"],
             ["晚上｜提早回臺北，或回臺北 Sing go! 唱歌", "Evening · Return to Taipei early, or head to Sing Go for karaoke"],
-            ["返程｜平安回家", "Return trip · Head home safely"],
+            ["收尾｜平安回家", "Closing note · Head home safely"],
           ),
           tags: localizedList(
             ["雨天版", "Rainy plan"],
@@ -332,6 +354,14 @@
           "Formal group photo from the leadership training",
           "幹部訓練正式合影。",
           "Formal group photo from the leadership training.",
+        ),
+        ...reportGallery(
+          "annual-2025-07",
+          5,
+          "宜蘭幹部訓練活動紀錄",
+          "Yilan leadership training photo",
+          "宜蘭幹部訓練。",
+          "Leadership training in Yilan.",
         ),
         galleryImage(
           "assets/photos/july-training-day1-indoor-itinerary.jpg",
@@ -378,7 +408,7 @@
       month: 8,
       order: 3,
       title: localized("五區交接暨菁英論壇", "Five-District Handover & Leadership Forum"),
-      subtitle: localized("五區交接與論壇在同一天舉行。", "The handover and forum take place on the same day."),
+      subtitle: localized("五區交接與論壇安排在同一天展開。", "The handover and forum unfold on the same day."),
       folder: localized("8月五區聯合交接暨菁英論壇", "August Activities — Five-District Handover & Leadership Forum"),
       date: "2025/8/16",
       location: localized("五區聯合活動", "Five-district joint event"),
@@ -386,8 +416,8 @@
       coverSrc: "assets/photos/aug-forum-meeting-photo.jpg",
       coverAlt: localized("五區交接暨菁英論壇現場會議畫面", "Forum meeting scene from the five-district handover"),
       summary: localized(
-        "8 月同日舉行五區交接與菁英論壇，包含正式交接及跨區交流。",
-        "The five-district handover and leadership forum take place on the same day in August, combining the formal transition with cross-district exchange.",
+        "五區夥伴齊聚一堂，正式迎來新年度的聯合交接，北區會長婉華與新北區會長詠文也在這一天正式接棒。除了象徵責任與服務精神的傳承，活動也安排菁英論壇，透過不同領域前輩的經驗分享，讓獎學生看見更多職涯與人生的可能。從受獎到服務、從學習到承擔，希望每一位夥伴都能帶著在扶輪獲得的養分，在自己的道路上持續成長。",
+        "Members from five districts gathered for the new year's joint handover, where Hannah of Taipei North and Victoria of New Taipei formally began their terms. The ceremony passed on both responsibility and a commitment to service. A leadership forum followed, bringing together speakers from different fields and giving scholarship recipients a wider view of possible careers and lives beyond the program.",
       ),
       highlights: localizedList(
         ["五區聯合", "Five districts"],
@@ -395,8 +425,8 @@
         ["菁英論壇", "Leadership forum"],
       ),
       availability: localized(
-        "本月收錄交接與論壇的現場照片。",
-        "This month includes photos from the handover and forum.",
+        "交接與論壇同場進行，留下的是上任時刻與現場交流。",
+        "The handover and forum share the same stage, pairing the new term with live exchange across the room.",
       ),
       gallery: [
         galleryImage(
@@ -429,8 +459,8 @@
       order: 4,
       title: localized("扶輪聲林之王", "Rotary Singing Night"),
       subtitle: localized(
-        "例會在 KTV 舉行，包含歌唱比賽與自由歡唱。",
-        "The meeting takes place at a KTV and includes a singing contest and open singing.",
+        "把例會搬進 KTV，先比賽，也留時間自由歡唱。",
+        "A meeting set inside a KTV, with time for both the contest and open singing.",
       ),
       folder: localized("9月活動__扶輪聲林之王", "September Activities — Rotary Singing Night"),
       date: "2025/9/20",
@@ -439,8 +469,8 @@
       coverSrc: "assets/photos/sep-singing-group-photo.jpg",
       coverAlt: localized("扶輪聲林之王現場主持與評審席畫面", "Scene from the Rotary Singing Night panel table"),
       summary: localized(
-        "9 月的歌唱例會在浪漫屋視聽歌唱城舉行。參加者可報名比賽，也可參加自由歡唱與拍照。",
-        "The September singing meeting takes place at Romantic House KTV. Participants may enter the contest or join the open singing and photo session.",
+        "九月例會把舞台交給每一位喜歡唱歌、敢於展現自己的夥伴！活動來到充滿復古氣息的浪漫屋視聽歌唱城，舉辦趣味歌唱競賽，並邀請評審為參賽者講評。有人認真備戰、有人第一次鼓起勇氣站上舞台，也有人單純負責在台下用力歡呼。比賽結束後大家繼續自由歡唱、拍照交流，讓這場例會少了幾分正式，多了許多笑聲與共同回憶。",
+        "September gave the stage to anyone who loved to sing or wanted to try performing. At the retro Romantic House KTV, members joined a lighthearted contest with feedback from the judges. Some arrived ready to compete, some stepped on stage for the first time, and others cheered from the audience. After the contest, the microphones stayed on for open singing, photos, and an easy afternoon together.",
       ),
       highlights: localizedList(
         ["歌唱比賽", "Singing contest"],
@@ -449,16 +479,16 @@
         ["復古 KTV", "Retro KTV venue"],
       ),
       availability: localized(
-        "收錄場佈、正式比賽與自由歡唱的活動內容。",
-        "Includes event setup, the formal contest, and open singing.",
+        "從場佈、比賽到自由歡唱，整個下午都圍著舞台和現場氣氛展開。",
+        "From setup to the contest and then open singing, the whole afternoon moves around the stage and the atmosphere in the room.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("這場例會怎麼玩", "How the meeting works"),
           summary: localized(
-            "活動場地是由復古舞廳改建的大坪數 KTV。參加者可先報名，當天再決定是否參賽；比賽後安排自由歡唱與拍照。",
-            "The venue is a large KTV converted from a vintage dance hall. Participants may register first and decide on the day whether to compete; open singing and photos follow the contest.",
+            "這次把例會放進復古舞廳改建的大坪數 KTV。想唱的人可以先報名，當天再決定要不要正式參賽；不比賽也沒關係，後面還有自由歡唱和拍照時間。",
+            "This meeting moves into a large KTV converted from a vintage dance hall. Anyone interested can register first and decide on the day whether to enter the contest. Even if you do not compete, there is still open singing and photo time later in the afternoon.",
           ),
           details: localizedList(
             ["地點｜浪漫屋視聽歌唱城", "Venue · Romantic House KTV"],
@@ -478,8 +508,8 @@
           date: localized("當日流程", "Schedule"),
           title: localized("9 月 20 日流程", "September 20 schedule"),
           summary: localized(
-            "中午進行場佈與報到，下午安排正式比賽、評審講評、自由歡唱與拍照。",
-            "The schedule includes setup and check-in at noon, followed by the contest, judge feedback, open singing, and photos.",
+            "中午先進場場佈與報到，下午進入正式比賽與評審點評，後段則留給自由歡唱與拍照。",
+            "The day begins with setup and check-in at noon, moves into the contest and judge feedback in the afternoon, and ends with open singing and photo time.",
           ),
           details: localizedList(
             ["11:30–12:30｜場佈時間", "11:30–12:30 · Setup"],
@@ -506,6 +536,14 @@
           "Scene from the Rotary Singing Night panel table",
           "扶輪聲林之王現場畫面。",
           "Rotary Singing Night scene.",
+        ),
+        ...reportGallery(
+          "annual-2025-09",
+          4,
+          "扶輪聲林之王活動紀錄",
+          "Rotary Singing Night photo",
+          "扶輪聲林之王活動現場。",
+          "Rotary Singing Night.",
         ),
         galleryImage(
           "assets/photos/sep-singing-stage-female.jpg",
@@ -562,8 +600,8 @@
       coverSrc: "assets/photos/oct-swim-pool-scene-01.jpg",
       coverAlt: localized("游泳例會泳池活動畫面", "Swimming meeting pool scene"),
       summary: localized(
-        "10 月的游泳例會先在 Ramble Cafe 報到、聯誼和合照，再前往玉泉公園溫水游泳池進行水上活動。",
-        "The October swimming meeting begins with check-in, mingling, and a group photo at Ramble Cafe, followed by water activities at Yuquan Park Heated Pool.",
+        "十月把知識與運動結合，先在 Ramble Cafe 集合交流，再一起前往玉泉公園溫水游泳池。透過健康與運動相關知識的分享，大家在下水前更了解暖身及避免運動傷害的重要性，接著直接把觀念帶到泳池實際體驗。從咖啡廳的交流到水中的運動時光，讓健康不只是聽完一場分享，而是真正融入生活的一次例會。",
+        "October paired a short health session with time in the water. The group first met at Ramble Cafe, then moved together to Yuquan Park Heated Pool. Before swimming, members learned more about warm-ups and preventing sports injuries, then put those ideas into practice in the pool. The meeting carried the conversation about health from the cafe into an active afternoon.",
       ),
       highlights: localizedList(
         ["咖啡聯誼", "Cafe gathering"],
@@ -571,16 +609,16 @@
         ["雙場地", "Two venues"],
       ),
       availability: localized(
-        "收錄兩個場地、當日流程與泳池資訊。",
-        "Includes both venues, the full schedule, and pool information.",
+        "兩個場地、當日流程和泳池資訊都整理在這裡。",
+        "Both venues, the full schedule, and pool information are gathered here.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("先集合，再下水", "Gather first, then head to the pool"),
           summary: localized(
-            "游泳例會分成咖啡廳與泳池兩個場地。前半段在北門附近集合、報到與分享，後半段一起移動到玉泉公園溫水游泳池。",
-            "The swimming meeting uses two venues. The group gathers near Beimen for check-in and sharing, then moves together to Yuquan Park Heated Pool.",
+            "這場游泳例會分成咖啡廳與泳池兩個場地。前半段在北門附近集合、報到與分享，後半段再一起移動到玉泉公園溫水游泳池，讓整個下午的節奏比較從容。",
+            "This swimming meeting is split across a cafe and a pool. The first half is for gathering, check-in, and sharing near Beimen, followed by a group move to Yuquan Park Heated Pool for the second half of the afternoon.",
           ),
           details: localizedList(
             ["日期｜2025 年 10 月 12 日（日）", "Date · Sunday, October 12, 2025"],
@@ -601,8 +639,8 @@
           date: localized("當日流程", "Schedule"),
           title: localized("10 月 12 日流程", "October 12 schedule"),
           summary: localized(
-            "先在咖啡廳進行聯誼、報到與例會，再移動到泳池合照與下水，活動於傍晚結束。",
-            "The group meets at the cafe for mingling, check-in, and the meeting, then moves to the pool for a group photo and swimming before finishing in the evening.",
+            "先在咖啡廳完成聯誼、報到與例會，再移動到泳池拍合照、下水活動，最後於傍晚結束。",
+            "The afternoon begins with mingling, check-in, and the meeting at the cafe, then moves to the pool for a photo and swim before wrapping up in the evening.",
           ),
           details: localizedList(
             ["13:00–13:30｜Ramble Cafe 聯誼、報到", "13:00–13:30 · Mingling and check-in at Ramble Cafe"],
@@ -622,10 +660,10 @@
         },
         {
           date: localized("場地資訊", "Venue notes"),
-          title: localized("活動場地", "Venues"),
+          title: localized("兩個場地都在這裡", "Venue details"),
           summary: localized(
-            "咖啡廳用於集合與例會，泳池是後半段活動場地；頁面另附泳池簡介。",
-            "The cafe is used for check-in and the meeting, while the pool hosts the second half of the activity. A pool introduction link is also included.",
+            "咖啡廳是集合和例會進行的地點，泳池則是後半段活動場地。泳池簡介也一併附上，方便先看場地資訊。",
+            "The cafe is the meeting and check-in point, while the pool hosts the second half of the activity. A pool introduction link is included as well for reference before the day.",
           ),
           details: localizedList(
             ["咖啡廳｜Ramble Cafe 漫步藍咖啡－台北北門店", "Cafe · Ramble Cafe, Taipei Beimen Branch"],
@@ -650,6 +688,14 @@
           "Swimming meeting pool scene",
           "游泳例會泳池活動畫面。",
           "Pool scene from the swimming meeting.",
+        ),
+        ...reportGallery(
+          "annual-2025-10",
+          5,
+          "游泳例會活動紀錄",
+          "Swimming meeting photo",
+          "游泳例會活動現場。",
+          "Swimming meeting.",
         ),
         galleryImage(
           "assets/photos/oct-swim-group-handbook.jpg",
@@ -679,8 +725,8 @@
       order: 6,
       title: localized("紡織例會", "Textile Meeting"),
       subtitle: localized(
-        "11 月第一場例會包含講師分享與手作體驗。",
-        "The first November meeting includes a speaker session and hands-on workshop.",
+        "11 月第一場例會，把手作和講師分享放在同一個下午。",
+        "November opens with an afternoon of making and conversation.",
       ),
       folder: localized("11月活動_紡織例會", "November Activities — Textile Meeting"),
       date: "2025/11/8",
@@ -689,8 +735,8 @@
       coverSrc: "assets/photos/nov-textile-group-photo.jpg",
       coverAlt: localized("紡織例會手作品展示畫面", "Textile meeting display photo"),
       summary: localized(
-        "11 月的紡織例會邀請賴綉丹分享設計經驗，並帶領大家完成節慶手作。",
-        "The November textile meeting features designer Lai Hsiu-Dan, who shares her experience and leads a seasonal craft workshop.",
+        "十一月的第一場例會，邀請瑤池藝術工作室創辦人賴綉丹擔任講師。從劇場服裝設計到成立自己的工作室，她先和大家分享一路走來的設計經驗，再帶著夥伴親手完成紡織作品。對不少人來說，這是第一次真正接觸紡織與縫紉，從一開始對材料與工具有些陌生，到最後拿著自己完成的作品合照，短短一個下午也體驗了一次從零到有的成就感。",
+        "November's first meeting welcomed Lai Hsiu-Dan, founder of Yaochi Art Studio. She spoke about her path from theatre costume design to running her own studio, then guided everyone through making a textile piece by hand. For many members, it was a first experience with fabric and sewing tools. By the end of the afternoon, each person had a finished piece to hold up for the camera.",
       ),
       highlights: localizedList(
         ["紡織手作", "Textile workshop"],
@@ -699,16 +745,16 @@
         ["臺大集思", "NTU venue"],
       ),
       availability: localized(
-        "收錄講師資料、實作流程與活動宣傳圖。",
-        "Includes the speaker profile, workshop schedule, and event poster.",
+        "這場例會把講師介紹、實作流程和宣傳資訊都整理在一起，也補上了活動宣傳圖。",
+        "This meeting now brings the speaker intro, workshop schedule, and promo material together in one place.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("這場手作例會", "What this session is"),
           summary: localized(
-            "紡織例會包含講師分享與實作時間，參加者可在現場完成一件節慶手作品。",
-            "The textile meeting includes a speaker session and workshop time, allowing participants to complete a seasonal handmade piece on site.",
+            "如果想做一件能帶走的小作品，或只是想留一個安靜做手作的下午，這場紡織例會很剛好。從報到、講師分享到實際動手做，時間都排得很完整。",
+            "If you want to leave with a finished handmade piece, or simply spend an afternoon making something at an unhurried pace, this textile meeting is a good fit. The day is laid out clearly from check-in through the speaker's sharing and the workshop itself.",
           ),
           details: localizedList(
             ["日期｜2025 年 11 月 8 日（六）", "Date · Saturday, November 8, 2025"],
@@ -729,8 +775,8 @@
           date: localized("講師", "Speaker"),
           title: localized("賴綉丹", "Lai Hsiu-Dan"),
           summary: localized(
-            "賴綉丹畢業於輔仁大學織品服裝設計研究所，曾任劇場服裝設計師，現為瑤池藝術工作室創辦人；本次由她帶領節慶手作。",
-            "Lai Hsiu-Dan graduated from Fu Jen Catholic University's textile and fashion design program, worked as a theater costume designer, and now runs Yaochi Art Studio. She leads the seasonal workshop.",
+            "講師出身輔仁大學織品服裝設計研究所，曾任劇場服裝設計師，現在經營瑤池藝術工作室。這次會從自己的設計背景出發，帶大家一起完成節慶手作。",
+            "Lai Hsiu-Dan studied textile and fashion design at Fu Jen Catholic University, worked in costume design for theater, and now runs Yaochi Art Studio. For this session, she brings that background into a holiday-themed handcraft workshop.",
           ),
           details: localizedList(
             ["學歷｜輔仁大學織品服裝設計研究所", "Background · Graduate studies in textile and fashion design at Fu Jen Catholic University"],
@@ -751,8 +797,8 @@
           date: localized("當日流程", "Schedule"),
           title: localized("11 月 8 日流程", "November 8 schedule"),
           summary: localized(
-            "流程依序為報到聯誼、講師介紹、講課、手作體驗與場復。",
-            "The schedule includes check-in, mingling, the speaker introduction, the lesson, the workshop, and room reset.",
+            "先報到與聯誼，再進入講師介紹、講課和手作體驗，最後留下整理場地的時間。",
+            "The afternoon starts with check-in and mingling, then moves into the speaker introduction, the lesson, the workshop itself, and time to reset the room at the end.",
           ),
           details: localizedList(
             ["13:00–13:30｜報到・聯誼", "13:00–13:30 · Check-in and mingling"],
@@ -778,6 +824,14 @@
           "Promotional poster for the textile workshop meeting",
           "紡織手作例會宣傳圖。",
           "Promotional poster for the textile meeting.",
+        ),
+        ...reportGallery(
+          "annual-2025-11-textile",
+          3,
+          "紡織手作例會活動紀錄",
+          "Textile workshop meeting photo",
+          "紡織手作例會。",
+          "Textile workshop meeting.",
         ),
         galleryImage(
           "assets/photos/nov-textile-group-photo.jpg",
@@ -826,7 +880,7 @@
       month: 11,
       order: 6.1,
       title: localized("捐血例會", "Blood Donation Meeting"),
-      subtitle: localized("週六下午舉行捐血與現場服務。", "Blood donation and on-site service take place on Saturday afternoon."),
+      subtitle: localized("把一個週六下午留給熱血與現場服務。", "A Saturday afternoon set aside for blood donation and on-site service."),
       folder: localized("11月活動_捐血例會", "November Activities — Blood Donation Meeting"),
       date: "2025/11/15",
       location: localized("信義威秀", "Vieshow Cinemas Xinyi"),
@@ -834,8 +888,8 @@
       coverSrc: "assets/photos/nov-blood-donation-group-photo.jpg",
       coverAlt: localized("捐血例會現場合照", "Blood donation meeting group photo"),
       summary: localized(
-        "11 月的捐血例會在信義威秀舉行。夥伴可參加捐血，也可協助現場服務。",
-        "The November blood donation meeting takes place at Vieshow Cinemas Xinyi. Members may donate blood or help with on-site service.",
+        "這一次，我們把例會變成一場真正能付諸行動的公益服務。夥伴們在信義威秀集合，符合資格的人挽起袖子參與捐血，當天不適合或無法捐血的人，也能留下來協助現場工作。有人貢獻一袋熱血，有人投入時間與人力，每一種參與方式都有它的意義。活動現場也準備了餐點、小禮物與抽獎，讓做好事的午後多了一份歡樂，也讓服務成為大家可以一起完成的日常行動。",
+        "This meeting became a hands-on service afternoon at Vieshow Cinemas Xinyi. Eligible members rolled up their sleeves to donate blood, while those who could not donate stayed to help on site. Some gave blood and others gave their time; both mattered. Food, small gifts, and a prize draw kept the atmosphere light and made service something the whole group could take part in together.",
       ),
       highlights: localizedList(
         ["公益參與", "Public service"],
@@ -844,16 +898,16 @@
         ["11 月例會", "November meeting"],
       ),
       availability: localized(
-        "收錄活動時間、地點與聯繫方式，捐血與現場服務皆可參加。",
-        "Includes the event time, venue, and contact details. Members may donate blood or help on site.",
+        "時間、地點和聯繫方式都整理在這裡，想捐血或想來幫忙都能直接查看。",
+        "Time, venue, and contact details are all gathered here, whether you plan to donate or simply help on site.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("11 月 15 日熱血行動", "The November 15 service afternoon"),
           summary: localized(
-            "活動同時安排捐血與現場支援。夥伴可依身體狀況決定是否捐血；不便捐血也能協助現場工作。",
-            "The event includes both blood donation and on-site support. Members may choose whether to donate based on their health, while others can help with event operations.",
+            "這場例會把捐血和現場支援放在同一個下午。夥伴可以依照自己的身體狀況決定是否捐血；就算不方便捐，也一樣能到場協助、陪伴和支援。",
+            "This meeting brings blood donation and on-site support together in one afternoon. Members can decide whether to donate based on their own condition, and those who cannot donate are still welcome to help and be present.",
           ),
           details: localizedList(
             ["日期｜2025 年 11 月 15 日（六）", "Date · Saturday, November 15, 2025"],
@@ -872,10 +926,10 @@
         },
         {
           date: localized("現場安排", "On-site notes"),
-          title: localized("現場服務安排", "On-site support"),
+          title: localized("捐血之外，也有服務工作", "There is more than donation"),
           summary: localized(
             "除了捐血本身，當天也安排了現場支援和交流。提早到的夥伴有主委請客先墊肚子，完成捐血後也準備了小禮和抽獎。",
-            "The day includes on-site support and time to gather. Early arrivals are treated to food by the committee chair, and donors receive small gifts and prize-draw entries.",
+            "The day includes on-site support and time to gather, not only the donation itself. Early arrivals are treated to food by the committee chair, and there are small gifts and prize draws after donating.",
           ),
           details: localizedList(
             ["提早到場｜主委請客先吃點東西", "Arrive early · Food is prepared by the committee chair for early arrivals"],
@@ -901,6 +955,14 @@
           "捐血例會現場合照。",
           "Blood donation meeting group photo.",
         ),
+        ...reportGallery(
+          "annual-2025-11-blood",
+          5,
+          "捐血公益例會活動紀錄",
+          "Blood donation meeting photo",
+          "捐血公益例會。",
+          "Blood donation meeting.",
+        ),
       ],
       links: [
         createLocalizedLink("查看活動地點", "View venue", "https://maps.app.goo.gl/ERQUooqdTfhrkdfj6?g_st="),
@@ -913,7 +975,7 @@
       month: 11,
       order: 6.2,
       title: localized("區塊鏈例會", "Blockchain Meeting"),
-      subtitle: localized("講座內容涵蓋創業、科技應用與職涯經驗。", "The lecture covers startups, technology applications, and career experience."),
+      subtitle: localized("把創業、科技應用與職涯現場放在同一個下午。", "An afternoon where entrepreneurship, technology, and career practice meet."),
       folder: localized("11月活動_區塊鏈例會", "November Activities — Blockchain Meeting"),
       date: "2025/11/29",
       location: localized("臺大集思會議中心 B1 拉斐爾廳", "GIS NTU Convention Center, B1 Raphael Hall"),
@@ -921,8 +983,8 @@
       coverSrc: "assets/photos/nov-blockchain-award-photo.jpg",
       coverAlt: localized("區塊鏈例會講師致謝畫面", "Blockchain meeting speaker appreciation photo"),
       summary: localized(
-        "這場區塊鏈例會邀請涂立青 Larry Tu 分享區塊鏈、產品策略在實體產業的應用與創業經驗。",
-        "This blockchain meeting features Larry Tu, who shares practical applications of blockchain and product strategy in real industries, along with his startup experience.",
+        "科技離生活其實沒有想像中遙遠。本次邀請 PaperPlane 創辦人暨執行長涂立青 Larry Tu，從業界角度帶大家認識區塊鏈，並延伸到創業、產品策略、營運與科技在實體產業中的應用。比起只介紹艱深的技術原理，講座更著重真實世界中如何使用這些工具，以及不同專業背景的人如何進入相關領域。現場提問與交流熱烈，也讓大家從更多角度重新認識快速變化的科技產業。",
+        "Technology is closer to everyday life than it first appears. Larry Tu, founder and CEO of PaperPlane, introduced blockchain through the practical work of building companies, shaping products, running operations, and applying technology in physical businesses. Rather than staying with technical theory, the talk focused on how these tools are used and how people from different backgrounds can enter the field. A lively question session rounded out the afternoon.",
       ),
       highlights: localizedList(
         ["區塊鏈", "Blockchain"],
@@ -931,16 +993,16 @@
         ["科技應用", "Technology in practice"],
       ),
       availability: localized(
-        "收錄講師資料、活動流程、報名連結與宣傳圖。",
-        "Includes the speaker profile, schedule, registration link, and poster.",
+        "講師資料、活動流程、報名連結和宣傳圖都補在這裡了。",
+        "The speaker profile, schedule, registration link, and poster are all included here.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("區塊鏈職業例會", "The blockchain career session"),
           summary: localized(
-            "內容涵蓋區塊鏈技術、創業、產品與營運，也介紹不同職務如何接觸這個領域。",
-            "The session covers blockchain technology, startups, products, and operations, and explains how people in different roles can approach the field.",
+            "這場分享不只談區塊鏈技術本身，也把題目拉回創業、產品和營運現場。從區塊鏈如何進入真實產業，到不同職能怎麼理解這個領域，整場例會更像一次完整的職涯對話。",
+            "This session is not only about blockchain technology itself. It brings the topic back to startups, products, and operations, opening a fuller career conversation around how blockchain enters real industries and how different roles can approach the field.",
           ),
           details: localizedList(
             ["日期｜2025 年 11 月 29 日（六）", "Date · Saturday, November 29, 2025"],
@@ -961,8 +1023,8 @@
           date: localized("講師", "Speaker"),
           title: localized("涂立青 Larry Tu", "Larry Tu"),
           summary: localized(
-            "涂立青現為 PaperPlane 創辦人暨執行長，也曾獲選《數位時代》台灣區塊鏈 30 大影響力人物；講座分享技術、產品與執行經驗。",
-            "Larry Tu is the founder and CEO of PaperPlane and was selected by Business Next as one of Taiwan's 30 most influential figures in blockchain. The lecture covers his experience in technology, products, and execution.",
+            "講師現為 PaperPlane 創辦人暨執行長，也曾獲選《數位時代》台灣區塊鏈 30 大影響力人物。這次會從自己的實務經驗出發，談技術、產品與執行如何一起落地。",
+            "Larry Tu is the founder and CEO of PaperPlane and was selected by Business Next as one of Taiwan's 30 most influential figures in blockchain. This session draws from his hands-on work across technology, products, and execution.",
           ),
           details: localizedList(
             ["現職｜PaperPlane 創辦人暨執行長", "Current role · Founder and CEO of PaperPlane"],
@@ -984,8 +1046,8 @@
           date: localized("當日流程", "Schedule"),
           title: localized("11 月 29 日流程", "November 29 schedule"),
           summary: localized(
-            "流程包含報到、講師分享、提問討論與場復。",
-            "The schedule includes check-in, the speaker session, questions, discussion, and room reset.",
+            "從報到、講師分享，到提問討論和收尾，整場例會留了一個完整下午把題目講清楚。",
+            "From check-in to the main talk, questions, and close-out, the meeting sets aside a full afternoon for the topic.",
           ),
           details: localizedList(
             ["13:00–13:30｜報到・聯誼", "13:00–13:30 · Check-in and mingling"],
@@ -1011,6 +1073,14 @@
           "Promotional poster for the blockchain meeting",
           "區塊鏈例會宣傳圖。",
           "Promotional poster for the blockchain meeting.",
+        ),
+        ...reportGallery(
+          "annual-2025-11-blockchain",
+          8,
+          "區塊鏈職業例會活動紀錄",
+          "Blockchain career meeting photo",
+          "區塊鏈職業例會。",
+          "Blockchain career meeting.",
         ),
         galleryImage(
           "assets/photos/nov-blockchain-award-photo.jpg",
@@ -1046,7 +1116,7 @@
       month: 12,
       order: 7,
       title: localized("街友送餐公益服務", "Meal Service for Unhoused People"),
-      subtitle: localized("下午一起料理與打包，傍晚前往街頭送餐。", "The group cooks and packs meals in the afternoon, then delivers them in the evening."),
+      subtitle: localized("在教室完成料理與打包，傍晚再把熱食送出去。", "Cooking, packing, and evening meal delivery all unfold in one day."),
       folder: localized("12月例會_街友送餐", "December Activities — Meal Service"),
       date: "2025/12/13",
       location: localized("永老師烹飪教室", "Chef Yong Cooking Studio"),
@@ -1054,8 +1124,8 @@
       coverSrc: "assets/photos/dec-meals-dec13-group-01.jpg",
       coverAlt: localized("12月13日公益送餐例會合影", "13 December community meal service group photo"),
       summary: localized(
-        "12 月的送餐例會在永老師烹飪教室集合，完成料理與打包後，步行前往艋舺公園與台北車站送餐。",
-        "The December meal service meets at Chef Yong Cooking Studio. After cooking and packing, the group walks to Monga Park and Taipei Main Station to deliver the meals.",
+        "歲末的例會，我們選擇一起做一件溫暖的事。夥伴們在永老師烹飪教室集合，從備料、料理到打包都親手完成，再帶著一份份剛準備好的熱食前往艋舺公園與台北車站發送。這一天沒有單純坐著聽講座，而是每個人都捲起袖子加入其中。從廚房一路走到街頭，親手把餐點交出去，也讓服務不再只是一個抽象的概念，而是一份真正送到他人手中的心意。",
+        "For the final meeting of the year, members gathered at Chef Yong Cooking Studio to prepare a warm meal together. Every step, from washing and cooking to packing, was done by hand before the group carried the food to Monga Park and Taipei Main Station. It was an afternoon spent working side by side, followed by the simple act of placing each meal directly into another person's hands.",
       ),
       highlights: localizedList(
         ["街友送餐", "Meal service"],
@@ -1064,16 +1134,16 @@
         ["歲末關懷", "Year-end care"],
       ),
       availability: localized(
-        "收錄活動流程、地點與報名連結，備餐和現場發送皆可參加。",
-        "Includes the schedule, venue, and registration link. Members may join the meal preparation or delivery.",
+        "流程、地點和報名連結都整理在這裡，想參加備餐或現場發送都可以直接查看。",
+        "The full schedule, venue, and registration link are all gathered here for anyone joining the cooking or the meal delivery.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("12 月 13 日送餐例會", "The December 13 meal service"),
           summary: localized(
-            "大家在教室一起料理、打包，再前往艋舺公園與台北車站送餐。",
-            "The group cooks and packs meals in the classroom, then delivers them at Monga Park and Taipei Main Station.",
+            "這場例會從教室裡的一頓熱食開始。大家一起料理、打包，再把剛完成的餐點送到艋舺公園和台北車站，讓歲末的聚會多了一點實際的陪伴。",
+            "This meeting begins with a hot meal prepared together in the classroom. After cooking and packing, the group brings the freshly made food to Monga Park and Taipei Main Station, turning the year-end gathering into something more tangible.",
           ),
           details: localizedList(
             ["日期｜2025 年 12 月 13 日（六）", "Date · Saturday, December 13, 2025"],
@@ -1094,8 +1164,8 @@
           date: localized("當日流程", "Schedule"),
           title: localized("12 月 13 日流程", "December 13 schedule"),
           summary: localized(
-            "下午在教室完成報到、料理與打包，傍晚整隊前往送餐地點。",
-            "The group checks in, cooks, and packs meals in the afternoon, then leaves for the distribution sites in the evening.",
+            "下午先在教室裡完成報到、料理與打包，傍晚整理好隊伍後，再往發送地點移動。",
+            "The afternoon is spent at the classroom for check-in, cooking, and packing, before the group heads out in the evening for distribution.",
           ),
           details: localizedList(
             ["13:00–13:30｜報到、交流", "13:00–13:30 · Check-in and mingling"],
@@ -1118,8 +1188,8 @@
           date: localized("參加方式", "Participation"),
           title: localized("從教室到發送現場", "From kitchen to delivery"),
           summary: localized(
-            "參加者共同完成料理、打包與送餐，並從教室步行前往指定地點發送當天準備的熱食。",
-            "Participants cook, pack, and deliver the meals together, walking from the classroom to the designated distribution sites.",
+            "這場活動不是單純把物資交出去，而是把料理、打包和送達都親手完成。從教室出發後，大家會一起步行前往指定地點，把當天準備的熱食送出去。",
+            "This is not only about handing over supplies. The group cooks, packs, and delivers together, then walks from the classroom to the designated distribution points with the meals prepared that day.",
           ),
           details: localizedList(
             ["集合點｜永老師烹飪教室", "Meeting point · Chef Yong Cooking Studio"],
@@ -1130,7 +1200,7 @@
           tags: localizedList(
             ["現場服務", "On-site service"],
             ["步行發送", "Walking delivery"],
-            ["歲末服務", "Year-end service"],
+            ["歲末陪伴", "Year-end companionship"],
           ),
           imageSrc: "assets/photos/dec-meals-handbook-service.jpg",
           imageAlt: localized("街友送餐公益服務發送畫面", "Meal distribution scene from the service activity"),
@@ -1144,6 +1214,14 @@
           "13 December community meal service group photo",
           "12月13日公益送餐例會合影。",
           "Group photo from the 13 December community meal service meeting.",
+        ),
+        ...reportGallery(
+          "annual-2025-12",
+          13,
+          "街友送餐公益服務活動紀錄",
+          "Community meal service photo",
+          "街友送餐公益服務。",
+          "Community meal service.",
         ),
         galleryImage(
           "assets/photos/dec-meals-dec13-hosts-01.jpg",
@@ -1214,8 +1292,8 @@
       coverSrc: "assets/photos/jan-awards-event-02.jpg",
       coverAlt: localized("頒獎典禮台上多人合照", "Award ceremony stage group photo"),
       summary: localized(
-        "1 月的頒獎典禮是與新一屆獎學生正式見面的場合，學長姐也參與司儀與頒獎工作。",
-        "January's award ceremony is the first formal meeting with the new scholarship recipients, with senior members helping as MCs and presenters.",
+        "一年前，我們也曾是台下等待名字被念到、從扶輪前輩手中接下獎狀的獎學生；一年後，再次回到頒獎典禮，身分已悄悄改變。學長姐們協助司儀及頒獎工作，也在這一天正式迎接新一屆獎學生。手中遞出的不只是一張獎狀，更像是把自己曾經收到的鼓勵與祝福繼續往下傳。從被歡迎的人成為歡迎別人的人，或許正是聯誼會傳承最珍貴的模樣。",
+        "A year earlier, many of the senior members had been sitting in the audience waiting to hear their own names. Returning to the award ceremony this time, they served as hosts and presenters while welcoming a new group of scholarship recipients. Passing each certificate forward also passed on the encouragement they had once received, turning former newcomers into the people now welcoming others.",
       ),
       highlights: localizedList(
         ["公開相簿", "Public album"],
@@ -1223,8 +1301,8 @@
         ["舞台紀錄", "Stage moments"],
       ),
       availability: localized(
-        "收錄頒獎典禮現場照片。",
-        "Includes photos from the award ceremony.",
+        "這場典禮讓新一屆獎學生與學長姐正式相見。",
+        "The ceremony formally brings new recipients and senior members together.",
       ),
       gallery: [
         galleryImage(
@@ -1233,6 +1311,14 @@
           "Award ceremony group photo on stage",
           "台上合照。",
           "Group photo on stage.",
+        ),
+        ...reportGallery(
+          "annual-2026-01",
+          3,
+          "頒獎典禮活動紀錄",
+          "Award ceremony photo",
+          "頒獎典禮。",
+          "Award ceremony.",
         ),
         galleryImage(
           "assets/photos/jan-awards-event-02.jpg",
@@ -1306,7 +1392,7 @@
       month: 2,
       order: 9,
       title: localized("北區｜新北區聯合小迎新", "Joint Mini Welcome Event"),
-      subtitle: localized("活動安排破冰遊戲與分組交流。", "The event includes icebreakers and small-group activities."),
+      subtitle: localized("用破冰與分組活動，讓新生更快熟悉彼此。", "Icebreakers and small-group activities help everyone get acquainted."),
       folder: localized("2026年2月小迎新", "February 2026 — Mini Welcome Event"),
       date: "2026/2/7",
       location: localized("迎新活動", "Welcome event"),
@@ -1314,8 +1400,8 @@
       coverSrc: "assets/photos/feb-welcome-group-photo.jpg",
       coverAlt: localized("北區新北區聯合小迎新大合照", "Group photo from the joint mini welcome event"),
       summary: localized(
-        "2 月的小迎新以破冰與分組交流為主，協助新生認識扶輪與聯誼會成員。",
-        "February's mini welcome event centers on icebreakers and group exchange, helping new members learn about Rotary and meet fellowship members.",
+        "第一次見面難免有些陌生，因此小迎新就從認識彼此開始。透過扶輪與聯誼會介紹、自我介紹、破冰遊戲以及分組交流，新生們一步步認識身邊的新夥伴，也開始了解加入聯誼會之後能一起參與些什麼。從活動剛開始時還有些拘謹，到後來逐漸聊開、笑聲越來越多，這場小迎新也成為新一屆獎學生真正走進聯誼會大家庭的第一站。",
+        "First meetings can feel unfamiliar, so the mini welcome event began by helping everyone get to know one another. Introductions to Rotary and the fellowship, short self-introductions, icebreakers, and small-group conversations gave new scholarship recipients an easy way into the community. The room gradually loosened up as people began talking and laughing together.",
       ),
       highlights: localizedList(
         ["小迎新", "Mini welcome"],
@@ -1323,8 +1409,8 @@
         ["關係建立", "Connection building"],
       ),
       availability: localized(
-        "活動包含破冰遊戲與分組交流。",
-        "The event includes icebreakers and small-group activities.",
+        "破冰與交流，是這場小迎新的主軸。",
+        "Icebreakers and conversation set the tone for this mini welcome event.",
       ),
       gallery: [
         galleryImage(
@@ -1333,6 +1419,14 @@
           "Group photo from the joint mini welcome event",
           "小迎新大合照。",
           "Mini welcome group photo.",
+        ),
+        ...reportGallery(
+          "annual-2026-02",
+          5,
+          "北區新北區聯合小迎新活動紀錄",
+          "Joint mini welcome event photo",
+          "北區與新北區聯合小迎新。",
+          "Joint mini welcome event.",
         ),
         galleryImage(
           "assets/photos/feb-welcome-opening-photo-01.jpg",
@@ -1420,8 +1514,8 @@
       coverSrc: "assets/photos/march-welcome-group-photo-web.jpg",
       coverAlt: localized("五區聯合大迎新戶外大合照", "Outdoor group photo from the five-district welcome camp"),
       summary: localized(
-        "五區共同籌辦兩天一夜大迎新，活動包含講座、破冰、夜市與大地遊戲。",
-        "The five districts jointly organize the two-day welcome camp, which includes talks, icebreakers, a night market, and field games.",
+        "來自五個區的夥伴共同投入籌備，把一次次討論與分工化成兩天一夜的大迎新。從講座、破冰活動，到晚上的夜市與第二天的大地遊戲，每一個環節背後都有不同夥伴的投入。最有成就感的不是完成了多少流程，而是看著第一天還互不熟悉的新生，到了第二天已經能一起合作、玩鬧與合照。那些籌備期間的忙碌，也在大家真正熟悉彼此的那一刻有了意義。",
+        "Members from five districts turned weeks of planning and shared tasks into a two-day welcome camp. Talks and icebreakers filled the first day, followed by a night market visit and field games the next morning. The best part was watching new members who barely knew one another on day one work, play, and take photos together by day two.",
       ),
       highlights: localizedList(
         ["大迎新", "Welcome camp"],
@@ -1429,8 +1523,8 @@
         ["五區聚會", "Five districts"],
       ),
       availability: localized(
-        "收錄兩天一夜行程與五區新生合照。",
-        "Includes the two-day schedule and group photos of new members from all five districts.",
+        "兩天一夜的大迎新，讓五區新生在活動裡熟悉彼此。",
+        "The overnight camp gives new members across the five districts time to get to know one another.",
       ),
       gallery: [
         galleryImage(
@@ -1439,6 +1533,14 @@
           "Outdoor group photo from the five-district welcome camp",
           "大迎新戶外大合照。",
           "Outdoor welcome camp group photo.",
+        ),
+        ...reportGallery(
+          "annual-2026-03",
+          1,
+          "五區聯合大迎新活動紀錄",
+          "Five-district welcome camp photo",
+          "五區聯合大迎新。",
+          "Five-district welcome camp.",
         ),
         galleryImage(
           "assets/photos/march-welcome-handbook-cover.jpg",
@@ -1470,8 +1572,8 @@
       coverSrc: "assets/photos/april-beach-group-photo.jpg",
       coverAlt: localized("淨灘公益沙排例會海邊大合照", "Beach group photo from the cleanup meeting"),
       summary: localized(
-        "4 月前往白宮行館進行淨灘，之後安排沙灘排球與溫泉活動。",
-        "In April, the group visits White House Resort for a beach cleanup, followed by beach volleyball and hot springs.",
+        "四月，我們把服務帶到海邊。夥伴們前往白宮行館，一起沿著沙灘撿拾垃圾，用雙手為海岸環境盡一份心力。完成淨灘後，活動從公益模式切換成歡樂模式，大家在海邊打起沙灘排球，再一起享受溫泉。從彎腰撿起一片片垃圾，到最後在沙灘上奔跑嬉鬧，服務、運動與聯誼全都濃縮在同一天，也成為年度裡格外有活力的一次相聚。",
+        "In April, service moved to the seaside. Members walked the beach at White House Resort collecting rubbish and caring for the coast together. Once the cleanup was finished, the group switched to beach volleyball and time in the hot springs. Service, sport, and friendship all fit into one energetic day by the water.",
       ),
       highlights: localizedList(
         ["淨灘例會", "Beach cleanup"],
@@ -1479,8 +1581,8 @@
         ["大合照", "Group photo"],
       ),
       availability: localized(
-        "收錄淨灘、沙灘排球與溫泉行程的現場照片。",
-        "Includes photos from the beach cleanup, volleyball, and hot spring activities.",
+        "這一天從海邊淨灘開始，也把相聚留到行程最後。",
+        "The day begins with cleanup at the shore and holds space for time together afterward.",
       ),
       gallery: [
         galleryImage(
@@ -1489,6 +1591,14 @@
           "Beach group photo from the cleanup meeting",
           "淨灘例會海邊大合照。",
           "Beach cleanup group photo.",
+        ),
+        ...reportGallery(
+          "annual-2026-04",
+          9,
+          "淨灘公益沙排例會活動紀錄",
+          "Beach cleanup and volleyball meeting photo",
+          "淨灘公益沙排例會。",
+          "Beach cleanup and volleyball meeting.",
         ),
         galleryImage(
           "assets/photos/april-beach-cleanup-photo-01.jpg",
@@ -1526,7 +1636,7 @@
       month: 5,
       order: 12,
       title: localized("直播產業職業例會", "Livestream Industry Meeting"),
-      subtitle: localized("講座介紹自媒體、直播工作與入行評估。", "The lecture introduces self-media, livestream work, and career considerations."),
+      subtitle: localized("把自媒體、直播工作和入行判斷放進同一場講座。", "A lecture on self-media, livestream work, and deciding whether the field fits you."),
       folder: localized("2026年5月直播產業職業例會", "May 2026 — Livestream Industry Meeting"),
       date: "2026/5/23",
       location: localized("臺大集思會議中心 B1 米開朗基羅廳", "GIS NTU Convention Center, B1 Michelangelo Hall"),
@@ -1534,8 +1644,8 @@
       coverSrc: "assets/photos/may-live-event-01.jpg",
       coverAlt: localized("直播產業職業例會大合照", "Livestream industry meeting group photo"),
       summary: localized(
-        "5 月雙北例會邀請前直播主兼經紀人沐飛，分享自媒體與直播產業的工作內容、入行評估與職涯經驗。",
-        "The May joint meeting features former livestream host and talent manager Mu-Fei, who discusses work in self-media and livestreaming, career considerations, and industry experience.",
+        "每天都在看短影音、直播與社群媒體，但鏡頭背後究竟是一個什麼樣的產業？本次雙北例會邀請前直播主兼經紀人沐飛，以第一線經驗帶大家認識自媒體與直播工作的真實樣貌。從如何入行、需要哪些能力，到產業中的工作模式與職涯選擇，讓大家不只看見螢幕前光鮮的一面，也能從業界角度思考自己是否適合投入其中，重新認識這個與 Z 世代生活密不可分的新興職業領域。",
+        "Short videos, livestreams, and social media are part of everyday life, but the work behind the camera is less familiar. Former livestream host and talent manager Mu-Fei shared a first-hand view of the industry, including how people enter the field, what skills the work requires, and the career choices available beyond the screen. The talk gave members a practical way to consider whether this growing line of work might suit them.",
       ),
       highlights: localizedList(
         ["自媒體", "Self-media"],
@@ -1544,16 +1654,16 @@
         ["雙北例會", "Joint meeting"],
       ),
       availability: localized(
-        "收錄日期、地點、報名表單與 Line 群。",
-        "Includes the date, venue, registration form, and Line group.",
+        "日期、地點、報名表單和 Line 群都整理在這裡。",
+        "The date, venue, registration form, and Line group are all gathered here.",
       ),
       activityBlocks: [
         {
           date: localized("活動簡介", "Overview"),
           title: localized("自媒體與直播產業講座", "The self-media and livestream lecture"),
           summary: localized(
-            "講座介紹自媒體經營、直播現場與產業工作方式，也說明入行前可以評估的方向。",
-            "The lecture introduces self-media operations, livestream production, and industry roles, along with factors to consider before entering the field.",
+            "這場 5 月例會想談的，不只是直播好不好玩，而是這份工作實際怎麼運作。從自媒體經營、直播現場，到素人如果想開始，可以先怎麼看自己、怎麼判斷方向，這場講座都會慢慢聊開。",
+            "This May meeting is not only about whether livestreaming seems exciting. It looks at how the work actually operates, from self-media practice and the livestream environment to how someone new might assess themselves and choose a direction.",
           ),
           details: localizedList(
             ["日期｜2026 年 5 月 23 日（六）", "Date · Saturday, May 23, 2026"],
@@ -1564,7 +1674,7 @@
           tags: localizedList(
             ["自媒體", "Self-media"],
             ["直播工作", "Livestream work"],
-            ["職涯方向", "Career paths"],
+            ["職涯探索", "Career exploration"],
           ),
           imageSrc: "assets/photos/may-live-poster-2026.jpg",
           imageAlt: localized("直播產業職業例會宣傳圖", "Promotional poster for the livestream industry meeting"),
@@ -1574,8 +1684,8 @@
           date: localized("講者", "Speaker"),
           title: localized("沐飛", "Mu-Fei"),
           summary: localized(
-            "前直播主兼經紀人沐飛分享直播產業的工作內容、訓練與現場判斷，也說明自媒體和直播工作的入行條件。",
-            "Former livestream host and talent manager Mu-Fei discusses industry roles, training, on-the-job decisions, and entry requirements for self-media and livestream work.",
+            "這次邀請前直播主兼經紀人沐飛分享。從業界視角出發，談直播產業的工作內容、實際訓練與現場判斷，也回應大家最常問的問題：我適不適合做自媒體？直播能不能變成工作？",
+            "The session invites former livestream host and talent manager Mu-Fei to speak from an industry perspective about the work itself, the training behind it, and the judgments made on the job, while also addressing common questions such as whether self-media is a fit and whether livestreaming can become real work.",
           ),
           details: localizedList(
             ["身分｜前直播主兼經紀人", "Role · Former livestream host and talent manager"],
@@ -1596,8 +1706,8 @@
           date: localized("當日安排", "Schedule"),
           title: localized("5 月 23 日流程", "May 23 schedule"),
           summary: localized(
-            "下午流程包含報到、講師分享與會後交流。",
-            "The afternoon schedule includes check-in, the speaker session, and post-event discussion.",
+            "整場安排在一個下午，讓報到、分享和會後交流都能留得比較完整。",
+            "The full session is set within one afternoon, leaving enough room for check-in, the talk itself, and conversation after it ends.",
           ),
           details: localizedList(
             ["13:00–17:00｜雙北例會・職業講座", "13:00–17:00 · Joint Taipei and New Taipei meeting and career lecture"],
@@ -1616,7 +1726,7 @@
         },
         {
           date: localized("參加提醒", "Notes"),
-          title: localized("場地提醒", "Venue notes"),
+          title: localized("報名前先看這裡", "A few notes before you join"),
           summary: localized(
             "會場有提供免費紅茶和咖啡，記得自備環保杯；另外，臺大集思會議中心內不能飲食，建議先用餐再到場。",
             "Free black tea and coffee are provided on site, so bringing a reusable cup is helpful. Food is not allowed inside the venue, so it is best to eat before arriving.",
@@ -1644,6 +1754,14 @@
           "Promotional poster for the livestream industry meeting",
           "直播產業職業例會宣傳圖留存。",
           "Archived promotional poster for the livestream industry meeting.",
+        ),
+        ...reportGallery(
+          "annual-2026-05",
+          6,
+          "直播產業職業例會活動紀錄",
+          "Livestream industry meeting photo",
+          "直播產業職業例會。",
+          "Livestream industry meeting.",
         ),
         galleryImage(
           "assets/photos/may-live-event-11.jpg",
@@ -1735,7 +1853,7 @@
       month: 6,
       order: 13,
       title: localized("雙北交接典禮", "Taipei & New Taipei Handover Ceremony"),
-      subtitle: localized("詠文與婉華於 6 月底卸任。", "Victoria and Hannah completed their terms at the end of June."),
+      subtitle: localized("詠文與婉華在 6 月底完成卸任，替 25-26 年度收尾。", "Victoria and Hannah complete their term at the end of June and bring the 25-26 year to its close."),
       folder: localized("2026年6月雙北交接典禮", "June 2026 — Taipei & New Taipei Handover Ceremony"),
       date: "2026/6/27",
       location: localized("雙北交接典禮", "Taipei & New Taipei handover ceremony"),
@@ -1743,17 +1861,37 @@
       coverSrc: "assets/photos/june-2026-handover-group-photo.jpg",
       coverAlt: localized("雙北交接典禮全場合照", "Full group photo from the Taipei and New Taipei handover ceremony"),
       summary: localized(
-        "6 月底舉行雙北交接典禮，詠文與婉華卸任，並拍攝年度合照。",
-        "The Taipei and New Taipei handover ceremony takes place in late June, when Victoria and Hannah complete their terms and join the annual group photo.",
+        `一年前，婉華與詠文接下北區與新北區會長的責任。當時對即將展開的一年既期待，也難免忐忑；一年後再次站在交接典禮上，身後已經留下了一整年的故事。
+
+從宜蘭幹部訓練開始，我們一起唱歌、游泳、做手作、認識區塊鏈與直播產業，也一起挽起袖子捐血、走進廚房為街友準備餐點、到海邊彎腰撿起垃圾。到了新一屆獎學生加入，我們又從曾經被迎接的人，成為籌辦小迎新、大迎新以及頒獎典禮的學長姐。
+
+回頭看才發現，這一年真正珍貴的從來不只是完成了十五場活動，而是在一次次籌備與相聚之中，大家願意為彼此多做一點，也願意把自己曾經從扶輪獲得的支持繼續傳下去。
+
+謝謝一路同行的幹部、獎學生夥伴，也謝謝董事長、PP Bob、PP Jasmine，以及每一位在背後給予支持與指導的扶輪前輩。因為有人願意在我們身後給予信任，我們才有機會從受獎學生一步步學習承擔、服務與帶領。
+
+交接代表任期結束，卻不代表這段關係就此畫下句點。
+
+從接受一份善意，到有能力把善意交給下一個人，也許就是我們這一年對「讓愛循環」最深刻的理解。願屬於 2025–26 年度的笑聲、友情與回憶留在每一位夥伴心中，也願這份從扶輪得到的溫暖，在下一屆、再下一屆的故事裡，繼續傳遞下去。`,
+        `A year earlier, Hannah and Victoria had accepted responsibility for Taipei North and New Taipei. They began the term with anticipation and some uncertainty; when they returned to the handover ceremony a year later, a full year of shared work stood behind them.
+
+It began with leadership training in Yilan, then moved through singing, swimming, textile making, and talks on blockchain and livestreaming. Members also donated blood, cooked meals for unhoused neighbours, cleaned the beach, and welcomed the next group of scholarship recipients through ceremonies and welcome events.
+
+What mattered most was not simply completing fifteen activities. It was the willingness to do a little more for one another and to pass along the support once received from Rotary.
+
+Thank you to every committee member and scholarship recipient who took part, and to the chair, PP Bob, PP Jasmine, and the Rotary mentors who offered guidance and trust throughout the year. Their support gave former scholarship recipients room to learn how to serve and lead.
+
+The handover marks the end of a term, not the end of these relationships.
+
+Receiving kindness and learning to pass it forward became the clearest meaning of "Let Love Continue" during this year. May the friendships and memories of 2025–26 stay with everyone who shared them, and may the same warmth continue into the years ahead.`,
       ),
       highlights: localizedList(
         ["雙北交接", "Dual-district handover"],
         ["年度卸任", "End of term"],
-        ["卸任交接", "Leadership transition"],
+        ["交棒時刻", "Passing the baton"],
       ),
       availability: localized(
-        "收錄雙北交接典禮合照、致詞與敲鐘畫面。",
-        "Includes group photos, speeches, and the bell ceremony from the Taipei and New Taipei handover.",
+        "這場交接典禮，為 25-26 年度留下一個正式而完整的句點。",
+        "The ceremony gives the 25-26 year a formal and complete closing note.",
       ),
       gallery: [
         galleryImage(
@@ -1762,6 +1900,14 @@
           "Full group photo from the Taipei and New Taipei handover ceremony",
           "雙北交接典禮全場合照。",
           "Full group photo from the handover ceremony.",
+        ),
+        ...reportGallery(
+          "annual-2026-06",
+          6,
+          "雙北交接典禮活動紀錄",
+          "Taipei and New Taipei handover ceremony photo",
+          "雙北交接典禮。",
+          "Taipei and New Taipei handover ceremony.",
         ),
         galleryImage(
           "assets/photos/june-2026-handover-speech.jpg",
