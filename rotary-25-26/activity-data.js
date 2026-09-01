@@ -197,7 +197,7 @@
       coverSrc: "assets/photos/june-handover-handbook-cover.jpg",
       coverAlt: localized("6月交接典禮手冊人物合照", "June handbook portrait from the handover ceremony"),
       summary: localized(
-        "新年度從一場交接與旅行正式開始。婉華與詠文接下北區、新北區的責任後，和夥伴們一同前往九份展開兩天一夜的旅程。走進老街、品嚐在地美食，也在茶樓裡喝茶聊天，在不同於正式例會的輕鬆氛圍中拉近彼此距離。這趟旅行既是上一段旅程的紀念，也是新團隊第一次共同出發，為接下來的一年寫下開場。",
+        "新年度從交接典禮與旅行開始。婉華與詠文接下北區、新北區的責任後，和夥伴們一同前往九份進行兩天一夜的旅程。大家走進老街、品嚐在地美食，也在茶樓裡喝茶聊天，在不同於正式例會的輕鬆氣氛中拉近彼此距離。這趟旅行既是上一年度的紀念，也是新團隊第一次一起出發。",
         "The new Rotary year began with a handover and a trip. After Hannah and Victoria took on their roles in Taipei North and New Taipei, the group set out for two days in Jiufen. They walked the old streets, shared local food, and talked over tea in a setting far removed from a formal meeting. The trip marked both a farewell to the previous year and the new team's first journey together.",
       ),
       highlights: localizedList(
@@ -207,7 +207,7 @@
         ["年度起點", "Opening chapter"],
       ),
       availability: localized(
-        "交接與畢旅都收在這個月份裡，也替新年度留下最初的合照與行程。",
+        "這個月份收錄交接典禮、九份畢旅的行程與合照。",
         "The handover and trip sit together in this opening month, leaving the first group photos and first shared itinerary of the year.",
       ),
       gallery: [
@@ -279,7 +279,7 @@
           date: localized("Day 1｜2025/7/19", "Day 1 · 2025/7/19"),
           title: localized("Day 1 室內版", "Day 1 · Indoor Program"),
           summary: localized(
-            "上午各車陸續出發，中午先在羅東用餐，午後於芯園茶屋展開例會與下午茶，接著換裝進行分組戲水競賽；晚上則以唱歌、烤肉與夜間交流收尾。",
+            "上午各車陸續出發，中午先在羅東用餐，午後於芯園茶屋進行例會與下午茶，接著換裝參加分組戲水競賽；晚上一起唱歌、烤肉與交流。",
             "Cars departed through the morning, lunch followed in Luodong, and the afternoon moved into the formal session at Xinyuan Tea House, afternoon tea, and team water games. The evening closed with singing, barbecue, and time together.",
           ),
           details: localizedList(
@@ -335,7 +335,7 @@
             ["午餐｜宜蘭湯蒸火鍋店（太飽可略）", "Lunch · Yilan Tangzheng Hot Pot (optional if everyone is too full)"],
             ["13:00–14:00｜Woosh Cafe × 半日森或宜蘭傳藝園區", "13:00–14:00 · Woosh Cafe x Halfday or the Yilan Traditional Arts Center"],
             ["晚上｜提早回臺北，或回臺北 Sing go! 唱歌", "Evening · Return to Taipei early, or head to Sing Go for karaoke"],
-            ["收尾｜平安回家", "Closing note · Head home safely"],
+            ["行程結束｜平安回家", "End of trip · Head home safely"],
           ),
           tags: localizedList(
             ["雨天版", "Rainy plan"],
@@ -408,7 +408,7 @@
       month: 8,
       order: 3,
       title: localized("五區交接暨菁英論壇", "Five-District Handover & Leadership Forum"),
-      subtitle: localized("五區交接與論壇安排在同一天展開。", "The handover and forum unfold on the same day."),
+      subtitle: localized("五區交接與菁英論壇於同一天舉行。", "The handover and leadership forum took place on the same day."),
       folder: localized("8月五區聯合交接暨菁英論壇", "August Activities — Five-District Handover & Leadership Forum"),
       date: "2025/8/16",
       location: localized("五區聯合活動", "Five-district joint event"),
@@ -479,7 +479,7 @@
         ["復古 KTV", "Retro KTV venue"],
       ),
       availability: localized(
-        "從場佈、比賽到自由歡唱，整個下午都圍著舞台和現場氣氛展開。",
+        "從場佈、歌唱比賽到自由歡唱，完整收錄當天下午的活動。",
         "From setup to the contest and then open singing, the whole afternoon moves around the stage and the atmosphere in the room.",
       ),
       activityBlocks: [
@@ -1046,7 +1046,7 @@
           date: localized("當日流程", "Schedule"),
           title: localized("11 月 29 日流程", "November 29 schedule"),
           summary: localized(
-            "從報到、講師分享，到提問討論和收尾，整場例會留了一個完整下午把題目講清楚。",
+            "下午從報到與講師分享開始，接著安排提問討論，最後進行場地復原。",
             "From check-in to the main talk, questions, and close-out, the meeting sets aside a full afternoon for the topic.",
           ),
           details: localizedList(
@@ -1853,7 +1853,7 @@
       month: 6,
       order: 13,
       title: localized("雙北交接典禮", "Taipei & New Taipei Handover Ceremony"),
-      subtitle: localized("詠文與婉華在 6 月底完成卸任，替 25-26 年度收尾。", "Victoria and Hannah complete their term at the end of June and bring the 25-26 year to its close."),
+      subtitle: localized("詠文與婉華在 6 月底完成 25-26 年度任期。", "Victoria and Hannah completed their 2025-26 term at the end of June."),
       folder: localized("2026年6月雙北交接典禮", "June 2026 — Taipei & New Taipei Handover Ceremony"),
       date: "2026/6/27",
       location: localized("雙北交接典禮", "Taipei & New Taipei handover ceremony"),
@@ -1861,7 +1861,7 @@
       coverSrc: "assets/photos/june-2026-handover-group-photo.jpg",
       coverAlt: localized("雙北交接典禮全場合照", "Full group photo from the Taipei and New Taipei handover ceremony"),
       summary: localized(
-        `一年前，婉華與詠文接下北區與新北區會長的責任。當時對即將展開的一年既期待，也難免忐忑；一年後再次站在交接典禮上，身後已經留下了一整年的故事。
+        `一年前，婉華與詠文接下北區與新北區會長的責任。當時對接下來的工作既期待，也難免緊張；一年後再次站在交接典禮上，身後已經留下了一整年的故事。
 
 從宜蘭幹部訓練開始，我們一起唱歌、游泳、做手作、認識區塊鏈與直播產業，也一起挽起袖子捐血、走進廚房為街友準備餐點、到海邊彎腰撿起垃圾。到了新一屆獎學生加入，我們又從曾經被迎接的人，成為籌辦小迎新、大迎新以及頒獎典禮的學長姐。
 
@@ -1869,7 +1869,7 @@
 
 謝謝一路同行的幹部、獎學生夥伴，也謝謝董事長、PP Bob、PP Jasmine，以及每一位在背後給予支持與指導的扶輪前輩。因為有人願意在我們身後給予信任，我們才有機會從受獎學生一步步學習承擔、服務與帶領。
 
-交接代表任期結束，卻不代表這段關係就此畫下句點。
+交接代表任期結束，但大家的聯繫仍會繼續。
 
 從接受一份善意，到有能力把善意交給下一個人，也許就是我們這一年對「讓愛循環」最深刻的理解。願屬於 2025–26 年度的笑聲、友情與回憶留在每一位夥伴心中，也願這份從扶輪得到的溫暖，在下一屆、再下一屆的故事裡，繼續傳遞下去。`,
         `A year earlier, Hannah and Victoria had accepted responsibility for Taipei North and New Taipei. They began the term with anticipation and some uncertainty; when they returned to the handover ceremony a year later, a full year of shared work stood behind them.
@@ -1890,7 +1890,7 @@ Receiving kindness and learning to pass it forward became the clearest meaning o
         ["交棒時刻", "Passing the baton"],
       ),
       availability: localized(
-        "這場交接典禮，為 25-26 年度留下一個正式而完整的句點。",
+        "這場交接典禮，記錄 25-26 年度正式交棒的時刻。",
         "The ceremony gives the 25-26 year a formal and complete closing note.",
       ),
       gallery: [

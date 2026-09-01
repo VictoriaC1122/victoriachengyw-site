@@ -199,7 +199,7 @@ function renderEventCard(event, index = 0) {
       role="button"
       aria-label="${escapeHtml(t("common.archive.card.openAria", { label: event.label, title: event.title }))}"
       data-event-id="${escapeHtml(event.id)}"
-      style="--event-accent: ${escapeHtml(event.accent)}; --card-delay: ${index * 70}ms"
+      style="--event-accent: ${escapeHtml(event.accent)}; --card-delay: ${Math.min(index, 6) * 55}ms"
     >
       <div class="timeline-rail" aria-hidden="true">
         <span class="timeline-stamp">${escapeHtml(event.label)}</span>
@@ -486,6 +486,8 @@ function closeDetail() {
   }
 
   const focusTarget = state.lastTrigger?.isConnected ? state.lastTrigger : getActiveCardElement();
+
+  refs.detailGallery?.querySelectorAll("video").forEach((video) => video.pause());
 
   setModalOpen(false);
   state.activeEventId = null;
