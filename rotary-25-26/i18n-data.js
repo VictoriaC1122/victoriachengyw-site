@@ -345,7 +345,7 @@
           },
           section: {
             eyebrow: "會長資料",
-            title: "2025-26 年度會長介紹",
+            title: "婉華與詠文",
             intro: "收錄兩位會長的基本資料與年度回顧。",
           },
           labels: {
@@ -717,7 +717,7 @@
           },
           section: {
             eyebrow: "Profiles",
-            title: "2025-26 Leaders",
+            title: "Hannah & Victoria",
             intro: "Profiles and year notes for both leaders.",
           },
           labels: {
