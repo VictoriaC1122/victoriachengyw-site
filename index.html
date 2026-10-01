@@ -1393,6 +1393,48 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.cv-intro {
+  max-width: 720px;
+  color: #5f5b59;
+}
+
+.cv-version-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 34px;
+}
+
+.cv-version {
+  min-width: 0;
+  padding: 24px 0 4px;
+  border-top: 2px solid #d9cddd;
+}
+
+.cv-version-country {
+  margin: 0 0 8px;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cv-version h2 {
+  margin: 0 0 10px;
+  color: #2d2d2d;
+  font-size: 25px;
+}
+
+.cv-version p {
+  max-width: 430px;
+  margin: 0;
+  color: #5f5b59;
+  font-size: 15px;
+}
+
+.cv-version .cert-btn {
+  margin: 20px 0 0;
+}
+
 #projects .activity-section .cert-btn {
   border-color: var(--activity-button-border);
   background: var(--activity-button-bg);
@@ -1584,6 +1626,16 @@ a:hover {
 }
 
 @media (max-width: 680px) {
+  .cv-version-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .cv-version {
+    padding-top: 20px;
+  }
+
   .app-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -2430,12 +2482,28 @@ a:hover {
       <section id="cv" class="tab-content" role="tabpanel" aria-labelledby="tab-cv" tabindex="0" hidden>
         <h1>CV</h1>
         <div class="underline"></div>
-        <p>You may download my full academic CV here:</p>
-        <p>
-          <a href="resume/resume.pdf" download class="cert-btn">
-            Download CV (PDF)
-          </a>
+        <p class="cv-intro">
+          Two country-specific versions are available. Please choose the CV with the contact details most
+          appropriate for your location.
         </p>
+        <div class="cv-version-grid" aria-label="Country-specific CV versions">
+          <article class="cv-version">
+            <p class="cv-version-country">United States</p>
+            <h2>United States CV</h2>
+            <p>Prepared with Philadelphia location and U.S. contact details.</p>
+            <a href="resume/Victoria_Cheng_CV_US.pdf" download class="cert-btn">
+              Download U.S. CV (PDF)
+            </a>
+          </article>
+          <article class="cv-version">
+            <p class="cv-version-country">Taiwan</p>
+            <h2>Taiwan CV</h2>
+            <p>Prepared with Taipei location and Taiwan contact details.</p>
+            <a href="resume/Victoria_Cheng_CV_Taiwan.pdf" download class="cert-btn">
+              Download Taiwan CV (PDF)
+            </a>
+          </article>
+        </div>
       </section>
 
     </main>
