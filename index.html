@@ -401,10 +401,7 @@ a:hover {
 }
 
 .about-lead {
-  max-width: 720px;
   color: #292729;
-  font-size: 21px;
-  line-height: 1.72;
 }
 
 /* 圖片區塊 */
@@ -420,21 +417,29 @@ a:hover {
   width: 300px;
   max-width: 100%;
   aspect-ratio: 1;
-  padding: 8px;
+  padding: 7px;
   border: 1px solid #ded7df;
   border-radius: 50%;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 16px 42px rgba(57, 45, 57, 0.14);
+  box-shadow: 0 12px 32px rgba(57, 45, 57, 0.11);
   flex-shrink: 0;
+}
+
+.photo-crop {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #282826;
 }
 
 .photo-circle img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  object-position: center 30%;
+  /* Anchor the top of the portrait so the face sits closer to the circle's center. */
+  object-position: center top;
   display: block;
 }
 
@@ -1701,7 +1706,6 @@ a:hover {
     padding-top: 24px;
   }
 
-  .about-lead,
   .research-lead {
     font-size: 18px;
   }
@@ -1937,14 +1941,16 @@ a:hover {
         <div class="content-grid">
           <div class="photo-block">
             <div class="photo-circle">
-              <img
-                src="images/victoria-profile-1200.jpg"
-                width="800"
-                height="1200"
-                alt="Portrait of Victoria Cheng"
-                fetchpriority="high"
-                decoding="async"
-              />
+              <div class="photo-crop">
+                <img
+                  src="images/victoria-profile-1200.jpg"
+                  width="800"
+                  height="1200"
+                  alt="Portrait of Victoria Cheng"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </div>
             </div>
             <header class="site-identity" aria-label="Academic profile">
               <div class="identity-primary">
@@ -2011,7 +2017,7 @@ a:hover {
             <li class="update-item">
               <span class="update-year">2026</span>
               <p>
-                Two papers accepted for presentation at the
+                Presented two papers at the
                 <a href="https://www.aib.world/events/2026-annual-meeting/" target="_blank" rel="noopener noreferrer">AIB 2026 Annual Meeting</a>
                 in Manchester.
               </p>
@@ -2047,7 +2053,7 @@ a:hover {
               <span class="publication-year">2026</span>
             </div>
             <h3 id="publication-signal-title">Signal or Noise? Maturity-Adjusted Technical Disclosure and Multi-Stage Startup Funding Decisions</h3>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Wan, C.-Y. (2026). Competitive Paper, Academy of International Business Annual Meeting, Manchester.</p>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Wan, C.-Y. (2026, July). Paper presented at the Academy of International Business Annual Meeting, Manchester, United Kingdom.</p>
           </article>
 
           <article class="publication-item" aria-labelledby="publication-legitimacy-title">
@@ -2055,8 +2061,8 @@ a:hover {
               <span class="publication-badge publication-badge--interactive">Interactive Paper</span>
               <span class="publication-year">2026</span>
             </div>
-            <h3 id="publication-legitimacy-title">Legitimacy-First Innovation: How Emerging Technology Firms Construct Mainstream Pathways Under Institutional Ambiguity</h3>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2026). Interactive Paper, Academy of International Business Annual Meeting, Manchester.</p>
+            <h3 id="publication-legitimacy-title">Legitimacy First: How Emerging Technology Firms Build Legitimacy Before Mainstream Adoption</h3>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yen, M.-H. (2026, July). Paper presented at the Academy of International Business Annual Meeting, Manchester, United Kingdom.</p>
           </article>
 
           <article class="publication-item" aria-labelledby="publication-mainstream-title">
@@ -2065,7 +2071,16 @@ a:hover {
               <span class="publication-year">2024</span>
             </div>
             <h3 id="publication-mainstream-title">Exploring Mainstream Paths to New Technology Deployment: Technological, Market, and Network Perspectives</h3>
-            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yeh, M.-H. (2024, June). Conference Paper, Academy of Asian Management, Miri, Malaysia.</p>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong>, &amp; Yen, M.-H. (2024, June). Paper presented at the Asia Academy of Management Conference, Miri, Malaysia.</p>
+          </article>
+
+          <article class="publication-item" aria-labelledby="publication-order-title">
+            <div class="publication-topline">
+              <span class="publication-badge publication-badge--conference">Conference Paper</span>
+              <span class="publication-year">2022</span>
+            </div>
+            <h3 id="publication-order-title">Bring Order Out of Chaos: How Cryptocurrency Firms Frame the Mainstream Strategy</h3>
+            <p class="publication-citation"><strong class="author-self">Cheng, Y.-W.</strong> (2022, September). Paper presented at the Taiwan Academy of Management Annual Conference, Taipei, Taiwan.</p>
           </article>
         </section>
       </section>
@@ -2085,22 +2100,22 @@ a:hover {
             <div>
               <h2>National Taiwan University</h2>
               <p class="education-degree">Ph.D. in International Business</p>
-              <p class="education-detail">College of Management · GPA 4.1/4.3</p>
+              <p class="education-detail">College of Management · Field: Strategic Management · GPA 4.1/4.3</p>
             </div>
           </article>
           <article class="education-item">
             <div class="education-year">2020-2022</div>
             <div>
               <h2>Fu Jen Catholic University</h2>
-              <p class="education-degree">MBA in Financial Management</p>
-              <p class="education-detail">GPA 3.98/4.0</p>
+              <p class="education-degree">M.B.A. in Business Administration</p>
+              <p class="education-detail">Concentration: Finance &amp; Strategic Management · GPA 3.98/4.0</p>
             </div>
           </article>
           <article class="education-item">
             <div class="education-year">2015-2019</div>
             <div>
               <h2>Tamkang University</h2>
-              <p class="education-degree">B.A. in Chinese Literature and B.B.A. in International Business</p>
+              <p class="education-degree">B.A. in Chinese Literature; minor in International Business</p>
               <p class="education-detail">Interdisciplinary training in language, markets, and international management</p>
             </div>
           </article>
